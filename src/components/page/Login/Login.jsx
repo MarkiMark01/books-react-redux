@@ -25,7 +25,25 @@ const Login = () => {
               value={password}
               className={styles.login__sign}
             />
-
+            <section className={styles.login__buttons}>
+              <button
+                type="button"
+                onClick={goHome}
+                className={styles.login__btn}
+              >
+                Back
+              </button>
+              <button type="submit" className={styles.login__btn}>
+                Log in
+              </button>
+              <button
+                type="button"
+                onClick={handleSignup}
+                className={styles.login__btn}
+              >
+                Sign up
+              </button>
+            </section>
             <section className={styles.login__text}>
               <div>
                 <span>Don't have an account?</span>
