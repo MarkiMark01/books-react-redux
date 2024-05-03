@@ -33,7 +33,25 @@ const Signin = () => {
               onChange={(e) => setPassword(e.target.value)}
               className={styles.login__sign}
             />
-
+            <section className={styles.login__buttons}>
+              <button
+                type="button"
+                onClick={handleReturnBack}
+                className={styles.login__btn}
+              >
+                Back
+              </button>
+              <button
+                type="button"
+                className={styles.login__btn}
+                onClick={handleReturnLogin}
+              >
+                Log in
+              </button>
+              <button type="submit" className={styles.login__btn}>
+                Register
+              </button>
+            </section>
             <section className={styles.login__text}>
               <div>
                 <span>Already have an account?</span>
