@@ -1,9 +1,26 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 const Signin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
+
+  const onRegister = (e) => {
+    e.preventDefault();
+
+    // if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
+    //   alert("Enter your login and password or sign up, please :)");
+    //   return;
+    // }
+    const data = { name, email, password };
+    dispatch(signup(data));
+    setName("");
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <>
