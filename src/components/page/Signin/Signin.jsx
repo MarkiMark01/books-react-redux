@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { signup } from "../../redux/auth/authOperations";
+import { getAuthError } from "../../redux/auth/authSelectors";
+import useAuth from "../../shared/hooks/useAuth";
 
 const Signin = () => {
   const [name, setName] = useState("");
@@ -7,6 +10,9 @@ const Signin = () => {
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
+
+  const { status, message } = useSelector(getAuthError);
+  const isLogin = useAuth();
 
   const onRegister = (e) => {
     e.preventDefault();
@@ -75,6 +81,7 @@ const Signin = () => {
               </div>
             </section>
           </form>
+          {status && <p className={styles.login__status}>{message}</p>}
         </section>
       </main>
     </>
