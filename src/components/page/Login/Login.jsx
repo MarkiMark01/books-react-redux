@@ -1,8 +1,17 @@
 import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import useAuth from "../../shared/hooks/useAuth";
+import { login } from "../../redux/auth/auth-operations";
+import styles from "./stylesLogin.module.scss";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const isLogin = useAuth();
+
+  const dispatch = useDispatch();
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -20,6 +29,10 @@ const Login = () => {
     e.preventDefault();
     navigate("/register");
   };
+
+  if (isLogin) {
+    return navigate(-1);
+  }
 
   return (
     <>
