@@ -4,6 +4,23 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const onLogin = (e) => {
+    e.preventDefault();
+    if (email.trim() === "" || password.trim() === "") {
+      alert("Enter your login and password or sign up, please :)");
+      return;
+    }
+    const data = { email, password };
+    dispatch(login(data));
+    setEmail("");
+    setPassword("");
+  };
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+    navigate("/register");
+  };
+
   return (
     <>
       <main>
