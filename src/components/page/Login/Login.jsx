@@ -9,6 +9,8 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const isLogin = useAuth();
 
   const dispatch = useDispatch();
@@ -29,6 +31,10 @@ const Login = () => {
     e.preventDefault();
     navigate("/register");
   };
+  const goHome = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
 
   if (isLogin) {
     return navigate(-1);
@@ -47,12 +53,14 @@ const Login = () => {
               type="text"
               placeholder="Email address"
               value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={styles.login__log}
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className={styles.login__sign}
             />
             <section className={styles.login__buttons}>
@@ -79,6 +87,9 @@ const Login = () => {
                 <span>Don't have an account?</span>
               </div>
             </section>
+            <NavLink to={"/register"} className={styles.login__link}>
+              Register Now
+            </NavLink>
           </form>
         </section>
       </main>
