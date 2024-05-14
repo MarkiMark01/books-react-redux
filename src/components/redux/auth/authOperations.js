@@ -33,3 +33,19 @@ export const login = createAsyncThunk(
         }
     }
 )
+export const logout = createAsyncThunk(
+    'auth/logout',
+    async (_, { rejectWithValue }) => {
+        try {
+            const result = await api.logout();
+            return result;
+        } catch ({ response }) {
+            const { status, data } = response;
+            const error = {
+                status,
+                message: data.message,
+            }
+            return rejectWithValue(error);
+        }
+    }
+)
