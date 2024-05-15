@@ -6,6 +6,15 @@ import styles from "../Header/stylesHeader.module.scss";
 import icon from "../../../Assets/pngegg.png";
 
 const Logout = () => {
+  const { name } = useSelector(getUser);
+
+  const dispatch = useDispatch();
+
+  const onLogout = () => {
+    dispatch(logout());
+    // return <Navigate to={"/"} />;
+  };
+
   return (
     <section className={styles.logout}>
       <img src={icon} alt="Icon" className={styles.logout__icon} />
