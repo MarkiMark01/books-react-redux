@@ -7,12 +7,22 @@ import Logout from "./Logout";
 import styles from "./stylesHeader.module.scss";
 import ModalHeader from "./ModalHeader";
 
-
+const getClassName = ({ isActive }) => {
+  const className = isActive ? `${styles.link} ${styles.active}` : styles.link;
+  return className;
+};
 
 const Header = () => {
+  const menuItems = useMenuItems();
 
+  const elements = menuItems.map(({ id, to, text }) => (
+    <li key={id}>
+      <NavLink className={getClassName} to={to}>
+        {text}
+      </NavLink>
+    </li>
+  ));
 
-  
   const isLogin = useAuth();
 
   return (
@@ -24,7 +34,6 @@ const Header = () => {
               className={`${styles.header__burger} ${
                 burgerActive ? styles.active : ""
               }`}
-
             >
               <span className={styles.header__burgerSpan}></span>
             </nav>
@@ -32,9 +41,8 @@ const Header = () => {
           </section>
         </header>
       ) : (
-      <section>Register</section>
+        <section>Register</section>
       )}
-    
     </>
   );
 };
