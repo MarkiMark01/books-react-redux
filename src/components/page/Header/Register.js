@@ -4,7 +4,13 @@ import styles from "./stylesHeader.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Register = () => {
+    const { i18n } = useTranslation();
+    const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        setSelectedLanguage(lng); // Збереження обраної мови
+    };
 
     return (
         <>
@@ -16,12 +22,14 @@ const Register = () => {
                     <nav className={styles.navRegister}>
                         <section style={{ display: "flex" }}>
                             <button
-
+                                onClick={() => changeLanguage("en")}
+                                disabled={selectedLanguage === "en"}
                             >
                                 EN
                             </button>
                             <button
-
+                                onClick={() => changeLanguage("uk")}
+                                disabled={selectedLanguage === "uk"}
                             >
                                 UKR
                             </button>
