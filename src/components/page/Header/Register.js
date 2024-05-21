@@ -9,7 +9,7 @@ const Register = () => {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-        setSelectedLanguage(lng); // Збереження обраної мови
+        setSelectedLanguage(lng);
     };
 
     return (

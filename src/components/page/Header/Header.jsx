@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+
 import useAuth from "../../shared/hooks/useAuth";
 import useMenuItems from "../../shared/hooks/useMenuItems"; // Import the custom hook
 import Register from "./Register";
@@ -41,7 +42,9 @@ const Header = () => {
           </section>
         </header>
       ) : (
-        <section>Register</section>
+        <section>
+          <Register />
+        </section>
       )}
     </>
   );
