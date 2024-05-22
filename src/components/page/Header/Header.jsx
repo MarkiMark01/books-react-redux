@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-
 import useAuth from "../../shared/hooks/useAuth";
 import useMenuItems from "../../shared/hooks/useMenuItems"; // Import the custom hook
 import Register from "./Register";
@@ -14,7 +13,27 @@ const getClassName = ({ isActive }) => {
 };
 
 const Header = () => {
+  const [burgerActive, setBurgerActive] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const menuItems = useMenuItems();
+
+  const modalOpen = () => {
+    setIsModalOpen(true);
+  };
+
+  const modalClose = () => {
+    setIsModalOpen(false);
+    setBurgerActive(false);
+  };
+
+  const toggleBurger = () => {
+    setBurgerActive(!burgerActive);
+    if (!burgerActive) {
+      modalOpen();
+    } else {
+      modalClose();
+    }
+  };
 
   const elements = menuItems.map(({ id, to, text }) => (
     <li key={id}>
@@ -35,17 +54,23 @@ const Header = () => {
               className={`${styles.header__burger} ${
                 burgerActive ? styles.active : ""
               }`}
+              onClick={toggleBurger}
             >
               <span className={styles.header__burgerSpan}></span>
             </nav>
+            <nav>
+              <ul className={styles.nav}>{elements}</ul>
+            </nav>
+            <NavLink to={"/"} className={styles.logo}>
+              BookStore
+            </NavLink>
             <Logout />
           </section>
         </header>
       ) : (
-        <section>
-          <Register />
-        </section>
+        <Register />
       )}
+      {isModalOpen && <ModalHeader onClose={modalClose}></ModalHeader>}
     </>
   );
 };
