@@ -12,6 +12,17 @@ import ua from "../../../Assets/ua.png";
 const modalRoot = document.querySelector("#modal-root");
 
 export default function ModalHeader({ onClose }) {
+  const { t, i18n } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setSelectedLanguage(lng);
+  };
+
+  useModal(onClose);
+  const menuItems = useMenuItems(); // Use the custom hook
+
   const handleBackdropClick = (e) => {
     if (e.currentTarget === e.target) {
       onClose();
@@ -40,6 +51,22 @@ export default function ModalHeader({ onClose }) {
   return createPortal(
     <section className={styles.modal__backdrop} onClick={handleBackdropClick}>
       <div className={styles.modal__content}>
+        <section className={styles.btnFlags}>
+          <img
+            src={usa}
+            alt="USA flag"
+            className={styles.flags}
+            onClick={() => changeLanguage("en")}
+            style={{ opacity: selectedLanguage === "en" ? 0.6 : 1 }}
+          />
+          <img
+            src={ua}
+            alt="UA flag"
+            className={styles.flags}
+            onClick={() => changeLanguage("uk")}
+            style={{ opacity: selectedLanguage === "uk" ? 0.6 : 1 }}
+          />
+        </section>
         <nav>
           <ul className={styles.nav}>{elements}</ul>
         </nav>
