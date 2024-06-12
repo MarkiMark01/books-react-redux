@@ -16,6 +16,10 @@ const Books = () => {
   const [textFilter, setTextFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("All books");
 
+  const navigate = useNavigate();
+
+  const isLogin = useAuth();
+
   const filteredBooks = books.filter((book) => {
     const numericPrice = parseFloat(book.price);
     return (
@@ -37,6 +41,12 @@ const Books = () => {
 
   const handlePriceFilter = (e) => {
     setPriceFilter(e.target.value);
+  };
+
+  const handleView = (book) => {
+    dispatch(setUniqueBook(book));
+    navigate(`/books/${book.id}`);
+    setTextFilter("");
   };
 
   useEffect(() => {
