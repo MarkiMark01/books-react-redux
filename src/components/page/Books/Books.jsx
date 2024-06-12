@@ -7,6 +7,12 @@ import useAuth from "../../shared/hooks/useAuth";
 import BooksComponents from "./BooksComponents";
 
 const Books = () => {
+  const books = useSelector((state) => state.books.books);
+  const isLoading = useSelector((state) => state.books.isLoading);
+  const error = useSelector((state) => state.books.error);
+
+  const dispatch = useDispatch();
+
   const [textFilter, setTextFilter] = useState("");
   const [priceFilter, setPriceFilter] = useState("All books");
 
@@ -32,6 +38,10 @@ const Books = () => {
   const handlePriceFilter = (e) => {
     setPriceFilter(e.target.value);
   };
+
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
 
   return (
     <BooksComponents
