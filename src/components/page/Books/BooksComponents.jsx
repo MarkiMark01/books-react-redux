@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Loader } from "../../shared/Loader";
+import { Loader } from "../../shared/loader";
 import styles from "./stylesBooks.module.scss";
 import useDebounce from "../../shared/hooks/useDebounce";
 
@@ -52,7 +52,7 @@ const BooksComponents = ({
         </section>
         <section className={styles.books__mainContainer}>
           {isLoading ? (
-
+            <Loader />
           ) : error ? (
             <p style={{ fontSize: "20px" }}>
               {t("Error")}: {error}
