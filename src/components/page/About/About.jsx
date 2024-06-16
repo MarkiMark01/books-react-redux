@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import styles from "./stylesAbout.module.scss";
+// import styles from "./stylesAbout.module.scss";
 
 const About = () => {
   return (
     <div className={styles.about}>
       <h2>Online Bookstore</h2>
-      <section className={styles.aboutText}>
+      <section>
         <p>
           At Book Store, we invite you to embark on a journey through the
           enchanting realms of literature, where every page unfolds a new
@@ -49,7 +49,7 @@ const About = () => {
           book is an adventure waiting to be unfolded. Happy reading! 📖✨
         </p>
       </section>
-      <section className={styles.goHome}>
+      <section >
         <NavLink to="/">Go to books</NavLink>
       </section>
     </div>
