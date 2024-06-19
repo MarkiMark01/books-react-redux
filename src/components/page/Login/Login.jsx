@@ -110,6 +110,10 @@ const Login = () => {
               >
                 Sign up
               </button>
+              <button onClick={loginGoogle} className={styles.googleBtn}>
+                <IconGoogle />
+                Sign in with Google
+              </button>
             </section>
             <section className={styles.login__text}>
               <div>
