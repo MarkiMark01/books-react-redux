@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import useAuth from "../../shared/hooks/useAuth";
 import { login } from "../../redux/auth/auth-operations";
 import styles from "./stylesLogin.module.scss";
+import { useGoogleLogin } from "@react-oauth/google";
+import IconGoogle from "../../../Assets/IconGoogle";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -35,6 +37,33 @@ const Login = () => {
     e.preventDefault();
     navigate("/");
   };
+
+  const loginGoogle = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${response.access_token}`,
+            },
+          }
+        );
+        dispatch(
+          googleLoginSuccess({
+            data: {
+              name: res.data.name,
+              email: res.data.email,
+            },
+          })
+        );
+        navigate("/");
+        // console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  });
 
   if (isLogin) {
     return navigate(-1);
