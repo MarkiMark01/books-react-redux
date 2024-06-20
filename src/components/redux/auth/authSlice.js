@@ -53,12 +53,7 @@ const authSlice = createSlice({
                 localStorage.setItem("isGoogleLogin", true);
             }
         },
-        googleLogout: (state) => {
-            state.isGoogleLogin = false;
-            state.googleUser = null;
-            localStorage.removeItem("googleUser");
-            localStorage.removeItem("isGoogleLogin");
-        },
+
     },
     extraReducers: {
         [signup.pending]: (state) => {
@@ -125,7 +120,7 @@ const authSlice = createSlice({
     },
 });
 
-export const { googleLoginSuccess, googleLogout } = authSlice.actions;
+export const { googleLoginSuccess } = authSlice.actions;
 export default authSlice.reducer;
 
 
