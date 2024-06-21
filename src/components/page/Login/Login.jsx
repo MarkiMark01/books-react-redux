@@ -93,23 +93,10 @@ const Login = () => {
               className={styles.login__sign}
             />
             <section className={styles.login__buttons}>
-              <button
-                type="button"
-                onClick={goHome}
-                className={styles.login__btn}
-              >
-                Back
-              </button>
               <button type="submit" className={styles.login__btn}>
                 Log in
               </button>
-              <button
-                type="button"
-                onClick={handleSignup}
-                className={styles.login__btn}
-              >
-                Sign up
-              </button>
+
               <button onClick={loginGoogle} className={styles.googleBtn}>
                 <IconGoogle />
                 Sign in with Google
