@@ -1,26 +1,32 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { useGoogleLogin } from "@react-oauth/google";
+
 import useAuth from "../../shared/hooks/useAuth";
 import { login } from "../../redux/auth/auth-operations";
+import { googleLoginSuccess } from "../../redux/auth/auth-slice";
 import styles from "./stylesLogin.module.scss";
-import { useGoogleLogin } from "@react-oauth/google";
 import IconGoogle from "../../../Assets/IconGoogle";
+// import { GoogleLogin } from "@react-oauth/google";
+// import { jwtDecode } from "jwt-decode";
+// import google from "../../../Assets/google.png";
 
 const Login = () => {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
   const isLogin = useAuth();
-
   const dispatch = useDispatch();
 
   const onLogin = (e) => {
     e.preventDefault();
     if (email.trim() === "" || password.trim() === "") {
-      alert("Enter your login and password or sign up, please :)");
+      alert(t("Enter your login and password or sign up, please :)"));
       return;
     }
     const data = { email, password };
@@ -29,14 +35,15 @@ const Login = () => {
     setPassword("");
   };
 
-  const handleSignup = (e) => {
-    e.preventDefault();
-    navigate("/register");
-  };
-  const goHome = (e) => {
-    e.preventDefault();
-    navigate("/");
-  };
+  // const handleSignup = (e) => {
+  //   e.preventDefault();
+  //   navigate("/register");
+  // };
+
+  // const goHome = (e) => {
+  //   e.preventDefault();
+  //   navigate("/");
+  // };
 
   const loginGoogle = useGoogleLogin({
     onSuccess: async (response) => {
@@ -73,47 +80,81 @@ const Login = () => {
     <>
       <main>
         <section className={styles.login}>
-          <form onSubmit={onLogin} className={styles.login__container}>
-            <h1 className={styles.login__title}>Log in</h1>
-            <p>
-              Log in now to unlock your exclusive access to content and offers
-            </p>
-            <input
-              type="text"
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={styles.login__log}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className={styles.login__sign}
-            />
-            <section className={styles.login__buttons}>
-              <button type="submit" className={styles.login__btn}>
-                Log in
-              </button>
-
-              <button onClick={loginGoogle} className={styles.googleBtn}>
-                <IconGoogle />
-                Sign in with Google
-              </button>
-            </section>
+          <section className={styles.loginBox}>
+            <form onSubmit={onLogin} className={styles.login__container}>
+              <h1 className={styles.login__title}>{t("Log in")}</h1>
+              <p>
+                {t(
+                  "Log in now to unlock your exclusive access to content and offers"
+                )}
+              </p>
+              <input
+                type="text"
+                placeholder={t("Email address")}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={styles.login__log}
+              />
+              <input
+                type="password"
+                placeholder={t("Password")}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={styles.login__sign}
+              />
+              <section className={styles.login__buttons}>
+                {/* <button
+                  type="button"
+                  onClick={goHome}
+                  className={styles.login__btn}
+                >
+                  {t("Back")}
+                </button> */}
+                <button type="submit" className={styles.login__btn}>
+                  {t("Log in")}
+                </button>
+                {/* <button
+                  type="button"
+                  onClick={handleSignup}
+                  className={styles.login__btn}
+                >
+                  {t("Sign up")}
+                </button> */}
+              </section>
+              <section className={styles.googleLoginButton}>
+                {/* <GoogleLogin
+                className={styles.container}
+                onSuccess={(credentialResponse) => {
+                  if (credentialResponse && credentialResponse.credential) {
+                    const decoded = jwtDecode(credentialResponse.credential);
+                    dispatch(googleLoginSuccess(decoded));
+                    navigate("/");
+                  } else {
+                  }
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+              /> */}
+              </section>
+            </form>
+            <button onClick={loginGoogle} className={styles.googleBtn}>
+              <IconGoogle />
+              Sign in with Google
+            </button>
             <section className={styles.login__text}>
               <div>
-                <span>Don't have an account?</span>
+                <span>{t("Don't have an account?")}</span>
               </div>
             </section>
             <NavLink to={"/register"} className={styles.login__link}>
-              Register Now
+              {t("Register Now")}
             </NavLink>
-          </form>
+          </section>
         </section>
       </main>
     </>
   );
 };
+
 export default Login;
