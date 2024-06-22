@@ -32,6 +32,32 @@ const Signin = () => {
 
   const navigate = useNavigate();
 
+  const loginGoogle = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${response.access_token}`,
+            },
+          }
+        );
+        dispatch(
+          googleLoginSuccess({
+            data: {
+              name: res.data.name,
+              email: res.data.email,
+            },
+          })
+        );
+        navigate("/");
+      } catch (error) {
+        console.log(error);
+      }
+    },
+  });
+
   if (isLogin) {
     return navigate("/");
   }
