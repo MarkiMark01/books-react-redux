@@ -32,13 +32,6 @@ const Signin = () => {
 
   const navigate = useNavigate();
 
-  const handleReturnLogin = () => {
-    navigate("/login");
-  };
-  const handleReturnBack = () => {
-    navigate(-1);
-  };
-
   if (isLogin) {
     return navigate("/");
   }
@@ -72,20 +65,6 @@ const Signin = () => {
               className={styles.login__sign}
             />
             <section className={styles.login__buttons}>
-              <button
-                type="button"
-                onClick={handleReturnBack}
-                className={styles.login__btn}
-              >
-                Back
-              </button>
-              <button
-                type="button"
-                className={styles.login__btn}
-                onClick={handleReturnLogin}
-              >
-                Log in
-              </button>
               <button type="submit" className={styles.login__btn}>
                 Register
               </button>
