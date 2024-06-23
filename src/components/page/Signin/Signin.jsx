@@ -1,10 +1,16 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { useGoogleLogin } from "@react-oauth/google";
+
 import { signup } from "../../redux/auth/auth-operations";
 import { getAuthError } from "../../redux/auth/auth-selectors";
+import { googleLoginSuccess } from "../../redux/auth/auth-slice";
 import useAuth from "../../shared/hooks/useAuth";
-import styles from "../Login/stylesLogin.module.scss";
+import styles from "./stylesSignin.module.scss";
+import IconGoogle from "../../../Assets/IconGoogle";
 
 const Signin = () => {
   const [name, setName] = useState("");
@@ -15,14 +21,12 @@ const Signin = () => {
   const isLogin = useAuth();
 
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const onRegister = (e) => {
     e.preventDefault();
 
-    // if (email.trim() === "" || password.trim() === "" || name.trim() === "") {
-    //   alert("Enter your login and password or sign up, please :)");
-    //   return;
-    // }
     const data = { name, email, password };
     dispatch(signup(data));
     setName("");
@@ -30,7 +34,13 @@ const Signin = () => {
     setPassword("");
   };
 
-  const navigate = useNavigate();
+  // const handleReturnLogin = () => {
+  //   navigate("/login");
+  // };
+
+  // const handleReturnBack = () => {
+  //   navigate(-1);
+  // };
 
   const loginGoogle = useGoogleLogin({
     onSuccess: async (response) => {
@@ -59,55 +69,71 @@ const Signin = () => {
   });
 
   if (isLogin) {
-    return navigate("/");
+    navigate("/");
   }
 
   return (
     <>
       <main>
         <section className={styles.login}>
-          <form onSubmit={onRegister} className={styles.login__container2}>
-            <h1 className={styles.login__title}>Sign In</h1>
-            <input
-              type="text"
-              placeholder="Your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className={styles.login__name}
-              required
-            />
-            <input
-              type="text"
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className={styles.login__log}
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className={styles.login__sign}
-            />
-            <section className={styles.login__buttons}>
-              <button type="submit" className={styles.login__btn}>
-                Register
-              </button>
-            </section>
+          <section className={styles.loginBox}>
+            <form onSubmit={onRegister} className={styles.login__container2}>
+              <h1 className={styles.login__title}>{t("Sign up")}</h1>
+              <input
+                type="text"
+                placeholder={t("Your name")}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className={styles.login__name}
+                required
+              />
+              <input
+                type="text"
+                placeholder={t("Email address")}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={styles.login__log}
+              />
+              <input
+                type="password"
+                placeholder={t("Password")}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className={styles.login__sign}
+              />
+              <section className={styles.login__buttons}>
+                {/* <button
+                  type="button"
+                  onClick={handleReturnBack}
+                  className={styles.login__btn}
+                >
+                  {t("Back")}
+                </button>
+                <button
+                  type="button"
+                  className={styles.login__btn}
+                  onClick={handleReturnLogin}
+                >
+                  {t("Log in")}
+                </button> */}
+                <button type="submit" className={styles.login__btn}>
+                  {t("Register")}
+                </button>
+              </section>
+            </form>
+            <button onClick={loginGoogle} className={styles.googleBtn}>
+              <IconGoogle />
+              Sign in with Google
+            </button>
             <section className={styles.login__text}>
               <div>
-                <span>Already have an account?</span>
+                <span>{t("Already have an account?")}</span>
               </div>
             </section>
             <NavLink to={"/login"} className={styles.login__link}>
-              Log In
+              {t("Log in")}
             </NavLink>
-          </form>
-          <button onClick={loginGoogle} className={styles.googleBtn}>
-            <IconGoogle />
-            Sign in with Google
-          </button>
+          </section>
           {status && <p className={styles.login__status}>{message}</p>}
         </section>
       </main>
