@@ -104,6 +104,10 @@ const Signin = () => {
               Log In
             </NavLink>
           </form>
+          <button onClick={loginGoogle} className={styles.googleBtn}>
+            <IconGoogle />
+            Sign in with Google
+          </button>
           {status && <p className={styles.login__status}>{message}</p>}
         </section>
       </main>
