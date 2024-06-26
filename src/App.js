@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { useDispatch } from "react-redux";
 
+import ScrollToTop from './components/ScrollToTop';
 import { current } from "./components/redux/auth/authOperations";
 import UserRoutes from './components/page/UserRoutes';
 import Header from "./components/page/Header/Header";
@@ -17,9 +18,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <UserRoutes />
-      <Footer />
+      <ScrollToTop>
+        <Header />
+        <UserRoutes />
+        <Footer />
+      </ScrollToTop>
     </div>
   );
 }
