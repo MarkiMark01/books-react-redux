@@ -8,12 +8,14 @@ const About = lazy(() => import("./About/About"));
 const NotFoundPage = lazy(() => import("./NotFoundPage/NotFoundPage"));
 const Footer = lazy(() => import("./Footer/Footer"));
 const Books = lazy(() => import("./Books/Books"));
+const BooksId = lazy(() => import("./BooksId/BooksId"));
 
 const UserRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Books />} />
+        <Route path="/books/:id" element={<BooksId />}></Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signin />} />
         <Route path="/about" element={<About />} />
