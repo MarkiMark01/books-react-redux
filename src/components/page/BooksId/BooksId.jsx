@@ -5,15 +5,18 @@ import { addNewCart, getUniqueBooks } from "../../redux/books/booksOperations";
 import BooksIdComponents from "./BooksIdComponents";
 
 const BooksId = () => {
-  // if (!uniqueBook) {
-  //   return (
-  //     <section className={styles.bookId__emptyBlock}>
-  //       <p className={styles.bookId__empty}>
-  //         The book has not been selected yet...
-  //       </p>
-  //     </section>
-  //   );
-  // }
+  const handleQuantity = (e) => {
+    const count = e.target.value;
+    let newQuantity;
+    if (count === "") {
+      newQuantity = "";
+    } else {
+      newQuantity = isNaN(count) ? 1 : Math.max(1, Math.floor(Number(count)));
+    }
+
+    setQuantity(newQuantity);
+    calculateTotalPrice(newQuantity, uniqueBook.price);
+  };
 
   return (
     <BooksIdComponents
