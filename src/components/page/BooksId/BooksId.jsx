@@ -10,6 +10,25 @@ const BooksId = () => {
     setTotalPrice(total.toFixed(2));
   };
 
+  const handlePurchase = () => {
+    const isBookInCart = cart.some((item) => item.id === uniqueBook.id);
+    if (isBookInCart) {
+      // toggleModalOpen();
+    } else {
+      dispatch(
+        addNewCart({
+          id: uniqueBook.id,
+          title: uniqueBook.title,
+          price: uniqueBook.price,
+          quantity: quantity,
+          totalPrice: totalPrice,
+        })
+      );
+      setQuantity(1);
+      navigate("/cart");
+    }
+  };
+
   const handleQuantity = (e) => {
     const count = e.target.value;
     let newQuantity;
