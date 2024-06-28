@@ -5,6 +5,11 @@ import { addNewCart, getUniqueBooks } from "../../redux/books/booksOperations";
 import BooksIdComponents from "./BooksIdComponents";
 
 const BooksId = () => {
+  const calculateTotalPrice = (quantity, price) => {
+    const total = quantity * price;
+    setTotalPrice(total.toFixed(2));
+  };
+
   const handleQuantity = (e) => {
     const count = e.target.value;
     let newQuantity;
