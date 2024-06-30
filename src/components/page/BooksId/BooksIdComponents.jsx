@@ -18,6 +18,13 @@ const BooksIdComponents = ({
 }) => {
   const navigate = useNavigate();
   const { id } = useParams();
+  const { t } = useTranslation();
+  const location = useLocation();
+
+  const [showFullDescriptionButton, setShowFullDescriptionButton] =
+    useState(false);
+
+  const goBack = () => navigate(-1);
 
   useEffect(() => {
     if (location.pathname.includes(`/books/${id}/description`)) {
@@ -96,6 +103,9 @@ const BooksIdComponents = ({
                 </button>
               </div>
             </div>
+          </section>
+          <section className={styles.bookId__fullDesc}>
+            <Outlet />
           </section>
           {showFullDescriptionButton && (
             <div className={styles.bookId__btn2}>
