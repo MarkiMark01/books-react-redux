@@ -19,6 +19,14 @@ const BooksIdComponents = ({
   const navigate = useNavigate();
   const { id } = useParams();
 
+  useEffect(() => {
+    if (location.pathname.includes(`/books/${id}/description`)) {
+      setShowFullDescriptionButton(true);
+    } else {
+      setShowFullDescriptionButton(false);
+    }
+  }, [location.pathname, id]);
+
   return (
     <main>
       {uniqueBook ? (
