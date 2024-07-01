@@ -6,6 +6,15 @@ import styles from "./styles.BookId.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Description = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const book = useSelector((state) => state.books.uniqueBook);
+
+  useEffect(() => {
+    dispatch(getUniqueBooks(id));
+  }, [dispatch, id]);
+
   return (
     <main>
       {book && (
