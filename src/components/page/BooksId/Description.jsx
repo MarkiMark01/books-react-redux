@@ -6,6 +6,9 @@ import styles from "./styles.BookId.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Description = () => {
+  const { id } = useParams();
+  const { t } = useTranslation();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -22,7 +25,15 @@ const Description = () => {
           <section>
             <p style={{ fontFamily: "Salsa" }}>{t(book.description)}</p>
           </section>
-          <section></section>
+          <section>
+            <button
+              type="button"
+              onClick={() => navigate(`/books/${id}/`)}
+              className={styles.bookId__fullDescButton}
+            >
+              {t("Close")}
+            </button>
+          </section>
         </>
       )}
     </main>
