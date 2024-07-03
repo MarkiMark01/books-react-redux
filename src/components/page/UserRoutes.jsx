@@ -6,20 +6,21 @@ const Login = lazy(() => import("./Login/Login"));
 const Signin = lazy(() => import("./Signin/Signin"));
 const About = lazy(() => import("./About/About"));
 const NotFoundPage = lazy(() => import("./NotFoundPage/NotFoundPage"));
-const Footer = lazy(() => import("./Footer/Footer"));
 const Books = lazy(() => import("./Books/Books"));
 const BooksId = lazy(() => import("./BooksId/BooksId"));
+const PublicRoute = lazy(() => import("../modules/PublicRoute"));
 
 const UserRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<Books />} />
+        <Route element={<PublicRoute />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Signin />} />
+        </Route>
         <Route path="/books/:id" element={<BooksId />}></Route>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Signin />} />
         <Route path="/about" element={<About />} />
-        <Route path="/footer" element={<Footer />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
