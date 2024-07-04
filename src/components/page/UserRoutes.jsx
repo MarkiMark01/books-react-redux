@@ -19,8 +19,10 @@ const UserRoutes = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Signin />} />
         </Route>
-        <Route path="/books/:id" element={<BooksId />}></Route>
-        <Route path="/about" element={<About />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/books/:id" element={<BooksId />}></Route>
+          <Route path="/about" element={<About />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Suspense>
