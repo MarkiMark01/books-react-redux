@@ -19,6 +19,10 @@ const Cart = () => {
   const handleRemoveFromCart = (item) => {
     dispatch(deleteCart(item.id));
   };
+
+  const handleClearCart = () => {
+    dispatch(clearAllCart());
+  };
   return <></>;
 };
 
