@@ -12,10 +12,18 @@ import { useNavigate } from "react-router-dom";
 import CartComponents from "./CartComponents";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
+  const handleRemoveFromCart = (item) => {
+    dispatch(deleteCart(item.id));
+  };
 
+  const handleClearCart = () => {
+    dispatch(clearAllCart());
+  };
   return (
-
+    <CartComponents
       goToBack={goToBack}
       goToHome={goToHome}
       handleClearCart={handleClearCart}
