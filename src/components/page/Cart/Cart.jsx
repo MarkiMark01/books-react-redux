@@ -23,6 +23,10 @@ const Cart = () => {
   const handleClearCart = () => {
     dispatch(clearAllCart());
   };
+
+  useEffect(() => {
+    dispatch(fetchCart());
+  }, [dispatch]);
   return <></>;
 };
 
