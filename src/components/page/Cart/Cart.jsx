@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import CartComponents from "./CartComponents";
 
 const Cart = () => {
+  const navigate = useNavigate();
   const totalPrice = useSelector((state) =>
     state.books.cart.reduce((sum, item) => sum + parseFloat(item.totalPrice), 0)
   );
@@ -27,6 +28,13 @@ const Cart = () => {
   useEffect(() => {
     dispatch(fetchCart());
   }, [dispatch]);
+
+  const goToHome = () => {
+    navigate("/");
+  };
+  const goToBack = () => {
+    navigate(-1);
+  };
   return <></>;
 };
 
