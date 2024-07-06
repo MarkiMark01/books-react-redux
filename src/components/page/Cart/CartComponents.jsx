@@ -110,6 +110,7 @@ const CartComponents = ({
         </ul>
       </section>
       {isModalOpen && <ModalWindow onClose={closeModal}></ModalWindow>}
+      <button>To Cart</button>
     </main>
   );
 };
