@@ -20,6 +20,11 @@ const CartComponents = ({
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const handlePurchase = () => {
+    openModal();
+    handleClearCart();
+  };
+
   return (
     <main className={styles.cart}>
       <section className={styles.cart__container}>
