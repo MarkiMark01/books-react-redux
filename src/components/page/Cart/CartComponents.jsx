@@ -14,6 +14,10 @@ const CartComponents = ({
 }) => {
   const { t } = useTranslation();
 
+  const totalSum = cart
+    .reduce((sum, item) => sum + parseFloat(item.totalPrice), 0)
+    .toFixed(2);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
