@@ -21,3 +21,11 @@ const calculateTotalPrice = (quantity, price, setTotalPrice) => {
     const total = quantity * price;
     setTotalPrice(total.toFixed(2));
 };
+
+test('calculateTotalPrice correctly calculates total price', () => {
+    render(<CalculateTotalComponent calculateTotal={calculateTotalPrice} />);
+
+    fireEvent.click(screen.getByText('Calculate Total'));
+
+    expect(screen.getByTestId('total-price')).toHaveTextContent('30.00');
+});
