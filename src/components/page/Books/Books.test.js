@@ -14,3 +14,35 @@ const filteredBooks = (books, textFilter, priceFilter) => {
         );
     });
 };
+describe('Filter function', () => {
+    const books = [
+        { title: 'Book 1', price: '10' },
+        { title: 'Book 2', price: '20' },
+        { title: 'Another Book', price: '30' }
+    ];
+
+    it('filters books by title and price range', () => {
+        const textFilter = 'book';
+        const priceFilter = 'from $15 to $30';
+
+        const testFilteredBooks = filteredBooks(books, textFilter, priceFilter);
+
+        expect(testFilteredBooks).toEqual([
+            { title: 'Book 2', price: '20' },
+            { title: 'Another Book', price: '30' }
+        ]);
+    });
+
+    it('filters books by title only', () => {
+        const textFilter = 'ano';
+        const priceFilter = 'All books';
+
+        const testFilteredBooks = filteredBooks(books, textFilter, priceFilter);
+
+        expect(testFilteredBooks).toEqual([
+            { title: 'Another Book', price: '30' }
+        ]);
+    });
+});
+
+
