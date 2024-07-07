@@ -17,3 +17,7 @@ const CalculateTotalComponent = ({ calculateTotal, handlePurchase }) => {
         </div>
     );
 };
+const calculateTotalPrice = (quantity, price, setTotalPrice) => {
+    const total = quantity * price;
+    setTotalPrice(total.toFixed(2));
+};
