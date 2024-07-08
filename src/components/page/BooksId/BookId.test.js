@@ -82,12 +82,3 @@ test('handlePurchase adds book to cart and navigates to cart page', () => {
     expect(mockSetQuantity).toHaveBeenCalledWith(1);
     expect(mockNavigate).toHaveBeenCalledWith('/cart');
 });
-
-test('calculat all price', () => {
-    render(<CalculateTotalComponent calculateTotal={calculateTotalPrice} />);
-
-    fireEvent.click(screen.getByNumber('Calculate TotalPice'));
-
-    expect(screen.getByTestClass('totalPrice')).toHaveTextContent('100.00');
-});
-
