@@ -12,5 +12,22 @@
     width: 100%;
     min-height: 100vh;
     background-color: $color-lightblue;
+
+    .books__container {
+      @extend %flex-sa;
+      flex-wrap: wrap;
+      width: 1220px;
+      min-height: 100vh;
+      padding-left: 0px;
+      background-color: $color-white;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
   }
 }
