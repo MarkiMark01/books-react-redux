@@ -6,4 +6,11 @@
   flex-direction: column;
   width: 100%;
   background-color: $color-lightblue;
+
+  .books__mainContainer {
+    @extend %flex-center2;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $color-lightblue;
+  }
 }
