@@ -1,2 +1,9 @@
 @import "../../shared/styles/variables";
 @import "../../shared/styles/placeholders";
+
+.books {
+  @extend %flex-center;
+  flex-direction: column;
+  width: 100%;
+  background-color: $color-lightblue;
+}
