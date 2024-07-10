@@ -61,6 +61,10 @@
         width: 250px;
         height: 400px;
       }
+
+      &:hover {
+        transform: scale(1.03);
+      }
     }
   }
 }
