@@ -192,4 +192,19 @@
       }
     }
   }
+  .books__filter {
+    @extend %flex-center;
+    width: 1220px;
+    height: 60px;
+    background-color: $color-white;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media (max-width: 570px) {
+      width: 100%;
+    }
+  }
 }
