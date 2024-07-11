@@ -127,6 +127,17 @@
           font-size: 14px;
         }
       }
+      .books__price {
+        margin: 10px 5px 0px 0px;
+        font-size: 19px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        color: $color-darkblue;
+
+        @media (max-width: 1110px) {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
