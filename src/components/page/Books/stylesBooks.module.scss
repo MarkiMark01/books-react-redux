@@ -148,6 +148,42 @@
           margin-bottom: 10px;
         }
       }
+      .books__button {
+          @extend %flex-center;
+          width: 80px;
+          height: 35px;
+          font-family: "Montserrat Alternates", sans-serif;
+          font-weight: 700;
+          border-radius: 50px;
+          border: 0px;
+          color: $color-white;
+          background: $color-linear-gradient;
+          color: $color-darkblue;
+          transition: 0.25s;
+          cursor: pointer;
+          margin-bottom: 15px;
+          transform: scale(1);
+
+          @media (max-width: 1110px) {
+            width: 73px;
+            height: 33px;
+            font-size: 12px;
+          }
+          @media (max-width: 930px) {
+            width: 71px;
+            height: 31px;
+            margin-bottom: 0px;
+            margin-top: 3px;
+          }
+          @media (max-width: 630px) {
+            width: 70px;
+            height: 30px;
+            font-size: 11px;
+          }
+          @media (max-width: 570px) {
+            width: 68px;
+            height: 30px;
+          }
     }
   }
 }
