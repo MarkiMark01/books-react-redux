@@ -206,5 +206,29 @@
     @media (max-width: 570px) {
       width: 100%;
     }
+
+    .books__filterText {
+      display: block;
+      text-align: center;
+      width: 480px;
+      height: 32px;
+      border: 1px solid $color-darkblue;
+      border-radius: 15px;
+      outline: none;
+      font-size: 16px;
+      background-color: $color-grey;
+      margin-right: 30px;
+
+      @media (max-width: 570px) {
+        width: 360px;
+      }
+      @media (max-width: 400px) {
+        width: 100%;
+        font-size: 13px;
+      }
+      @media (max-width: 350px) {
+        font-size: 12px;
+      }
   }
+
 }
