@@ -233,5 +233,25 @@
         transform: scale(1.03);
       }
     }
+    .books__filterPrice {
+      display: block;
+      text-align: center;
+      width: 125px;
+      height: 32px;
+      font-size: 14px;
+      outline: none;
+      border-radius: 20px;
+      border: 1px solid $color-darkblue;
+      background-color: $color-grey;
+      transition: transform linear 0.1s;
+
+      @media (max-width: 400px) {
+        width: 100px;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 11px;
+        width: 90px;
+      }
   }
 }
