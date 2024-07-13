@@ -54,5 +54,18 @@
         border: 2px solid $color-gold;
       }
     }
+    .bookId__box {
+      @extend %flex-center2;
+      width: 1220px;
+      height: 100%;
+      background-color: $color-white;
+  
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+      @media (max-width: 899px) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
   }
 }
