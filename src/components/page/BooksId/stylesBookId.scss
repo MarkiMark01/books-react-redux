@@ -146,6 +146,17 @@
           height: 450px;
         }
       }
-      
+      .bookId_purchase {
+        @extend %flex-center;
+        flex-direction: column;
+        width: 300px;
+        height: 250px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 15px;
+        background-color: $color-white;
+        color: $color-darkblue;
+        margin-right: 20px;
+        box-shadow: 0px 5px 20px -8px $color-blue;
   }
 }
