@@ -59,7 +59,7 @@
       width: 1220px;
       height: 100%;
       background-color: $color-white;
-  
+
       @media (max-width: 1200px) {
         width: 100%;
       }
@@ -76,7 +76,7 @@
         border: 1px solid $color-lightblue;
         box-shadow: 0px 5px 20px -8px $color-blue;
         margin-bottom: 10px;
-  
+
         @media (max-width: 999px) {
           width: 320px;
           height: 430px;
@@ -158,5 +158,31 @@
         color: $color-darkblue;
         margin-right: 20px;
         box-shadow: 0px 5px 20px -8px $color-blue;
+
+        @media (max-width: 899px) {
+          margin-top: 10px;
+          width: 95%;
+          margin-right: 20px;
+          margin-left: 20px;
+          margin-bottom: 20px;
+        }
+        @media (max-width: 736px) {
+          width: 100%;
+          margin-right: 30px;
+          margin-left: 30px;
+          height: 210px;
+        }
+        @media (max-width: 750px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 429px) {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+        @media (max-width: 290px) {
+          margin-top: 40px;
+        }
+      }
+    }
   }
 }
