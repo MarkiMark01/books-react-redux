@@ -245,7 +245,11 @@
         font-weight: 700;
         text-decoration: underline;
         color: $color-blue;
-  
+
+        @media (max-width: 816px) {
+          font-size: 17px;
+        }
+      }
     }
   }
 }
