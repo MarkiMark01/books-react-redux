@@ -258,7 +258,16 @@
         font-weight: 450;
         font-size: 20px;
 
-        
+        @media (max-width: 999px) {
+          font-size: 19px;
+        }
+        @media (max-width: 899px) {
+          font-size: 22px;
+        }
+        @media (max-width: 816px) {
+          font-size: 21px;
+        }
+      }
     }
   }
 }
