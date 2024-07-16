@@ -298,6 +298,17 @@
           font-size: 21px;
         }
       }
+      .booksId__quantity > input {
+        text-align: center;
+        width: 50px;
+        height: 25px;
+        border-radius: 30px;
+        font-size: 18px;
+        border: 2px solid $color-darkblue;
+        outline: none;
+        font-size: 20px;
+        font-weight: 700;
+      }
     }
   }
 }
