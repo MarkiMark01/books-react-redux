@@ -279,6 +279,13 @@
           font-size: 21px;
         }
       }
+      .booksId__quantity {
+      @extend %flex-sb;
+      height: 40px;
+      width: 90%;
+      margin-top: 10px;
+      font-weight: 450;
+      font-size: 20px;
     }
   }
 }
