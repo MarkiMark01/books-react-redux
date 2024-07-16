@@ -309,6 +309,13 @@
         font-size: 20px;
         font-weight: 700;
       }
+      .booksId__total {
+        @extend %flex-sb;
+        height: 40px;
+        width: 90%;
+        font-weight: 450;
+        font-size: 20px;
+        margin-top: 10px;
     }
   }
 }
