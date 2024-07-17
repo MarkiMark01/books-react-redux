@@ -330,6 +330,13 @@
       .booksId__total2 {
         font-size: 22px;
         font-weight: 700;
+
+        @media (max-width: 999px) {
+          font-size: 21px;
+        }
+        @media (max-width: 736px) {
+        }
+      }
     }
   }
 }
