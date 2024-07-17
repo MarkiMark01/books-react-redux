@@ -343,7 +343,10 @@
         height: 45px;
         margin-top: 20px;
 
-        
+        @media (max-width: 736px) {
+          margin-top: 0px;
+        }
+      }
     }
   }
 }
