@@ -347,6 +347,17 @@
           margin-top: 0px;
         }
       }
+      .bookId__button {
+        width: 90px;
+        height: 40px;
+        font-size: 12px;
+        font-weight: 900;
+        border-radius: 50px;
+        border: 1px solid $color-darkblue;
+        background: $color-linear-gradient;
+        color: $color-darkblue;
+        transition: 0.1s;
+        cursor: pointer;
     }
   }
 }
