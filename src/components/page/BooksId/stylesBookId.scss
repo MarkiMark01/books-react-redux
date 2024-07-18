@@ -441,13 +441,18 @@
           border: 2px solid $color-darkblue;
         }
       }
-      .bookId__btn2 {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 1220px;
-    height: 60px;
-    background-color: #fff;
+    }
+    .bookId__btn2 {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 1220px;
+      height: 60px;
+      background-color: #fff;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
     }
   }
 }
