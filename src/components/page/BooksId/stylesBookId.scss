@@ -414,26 +414,33 @@
       }
 
       .bookId__fullDescButton {
-      @extend %flex-center;
-      width: 70px;
-      height: 35px;
-      font-size: 13px;
-      font-weight: 900;
-      border-radius: 50px;
-      border: 1px solid $color-darkblue;
-      background: $color-blue;
-      color: $color-white;
-      transition: 0.1s;
-      cursor: pointer;
-      margin-bottom: 20px;
+        @extend %flex-center;
+        width: 70px;
+        height: 35px;
+        font-size: 13px;
+        font-weight: 900;
+        border-radius: 50px;
+        border: 1px solid $color-darkblue;
+        background: $color-blue;
+        color: $color-white;
+        transition: 0.1s;
+        cursor: pointer;
+        margin-bottom: 20px;
 
-      @media (max-width: 399px) {
-        width: 60px;
-        height: 30px;
-        font-size: 11px;
-        font-weight: 800;
+        @media (max-width: 399px) {
+          width: 60px;
+          height: 30px;
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+          background: $color-linear-gradient;
+          color: $color-darkblue;
+          border: 2px solid $color-darkblue;
+        }
       }
-
     }
   }
 }
