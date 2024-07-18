@@ -412,6 +412,20 @@
         height: 100%;
         padding-bottom: 0px;
       }
+
+      .bookId__fullDescButton {
+      @extend %flex-center;
+      width: 70px;
+      height: 35px;
+      font-size: 13px;
+      font-weight: 900;
+      border-radius: 50px;
+      border: 1px solid $color-darkblue;
+      background: $color-blue;
+      color: $color-white;
+      transition: 0.1s;
+      cursor: pointer;
+      margin-bottom: 20px;
     }
   }
 }
