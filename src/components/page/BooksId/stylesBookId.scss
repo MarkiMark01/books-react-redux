@@ -472,5 +472,11 @@
         height: 30px;
       }
 
+      &:hover {
+        transform: scale(1.02);
+        background: $color-darkblue;
+        color: $color-gold;
+      }
+    }
   }
 }
