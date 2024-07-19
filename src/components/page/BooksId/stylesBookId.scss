@@ -467,5 +467,10 @@
       cursor: pointer;
       margin-right: 20px;
 
+      @media (max-width: 399px) {
+        width: 80px;
+        height: 30px;
+      }
+
   }
 }
