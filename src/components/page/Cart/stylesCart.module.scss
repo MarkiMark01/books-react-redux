@@ -5,4 +5,13 @@
   @extend %flex-center;
   min-height: 100vh;
   background-color: $color-lightblue;
+
+  .cart__container {
+    @extend %flex-start;
+    flex-direction: column;
+    width: 1220px;
+    min-height: 100vh;
+    background-color: $color-white;
+    padding-top: 30px;
+  }
 }
