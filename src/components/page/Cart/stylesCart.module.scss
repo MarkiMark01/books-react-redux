@@ -21,5 +21,11 @@
     .cart__buttons {
       @extend %flex-sb;
       width: 95%;
+
+      @media (max-width: 1200px) {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
   }
 }
