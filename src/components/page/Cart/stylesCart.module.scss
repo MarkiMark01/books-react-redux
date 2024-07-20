@@ -13,5 +13,9 @@
     min-height: 100vh;
     background-color: $color-white;
     padding-top: 30px;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
   }
 }
