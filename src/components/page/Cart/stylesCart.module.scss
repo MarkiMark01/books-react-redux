@@ -39,6 +39,19 @@
           width: 115px;
         }
       }
+      .cart__button {
+        @extend %flex-center;
+        width: 70px;
+        height: 35px;
+        font-size: 12px;
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 800;
+        border-radius: 50px;
+        border: 1px solid $color-darkblue;
+        background: $color-linear-gradient;
+        color: $color-darkblue;
+        transition: 0.1s;
+        cursor: pointer;
     }
   }
 }
