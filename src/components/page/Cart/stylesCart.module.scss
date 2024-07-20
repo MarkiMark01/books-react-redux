@@ -30,6 +30,15 @@
       .cart__buttonsBack {
         @extend %flex-sb;
         width: 150px;
+
+        @media (max-width: 480px) {
+          width: 120px;
+        }
+
+        @media (max-width: 369px) {
+          width: 115px;
+        }
+      }
     }
   }
 }
