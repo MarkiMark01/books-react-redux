@@ -17,5 +17,9 @@
     @media (max-width: 1200px) {
       width: 100%;
     }
+
+    .cart__buttons {
+      @extend %flex-sb;
+      width: 95%;
   }
 }
