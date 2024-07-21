@@ -75,6 +75,14 @@
           width: 43px;
           height: 21px;
         }
+
+        &:hover {
+          transform: scale(1.02);
+          background: $color-darkblue;
+          color: $color-gold;
+          border: 2px solid $color-gold;
+        }
+      }
     }
   }
 }
