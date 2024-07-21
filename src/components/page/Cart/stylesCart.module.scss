@@ -109,6 +109,15 @@
           margin: 0;
         }
       }
+
+      .cart__block {
+        @extend %flex-sb;
+        flex-direction: column;
+        position: relative;
+        width: 70%;
+        background-color: $color-white;
+        border-radius: 15px;
+        margin-top: 25px;
     }
   }
 }
