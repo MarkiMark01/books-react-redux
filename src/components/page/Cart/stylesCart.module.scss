@@ -118,6 +118,14 @@
         background-color: $color-white;
         border-radius: 15px;
         margin-top: 25px;
+
+        .img {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          right: 90px;
+          top: 38%;
     }
   }
 }
