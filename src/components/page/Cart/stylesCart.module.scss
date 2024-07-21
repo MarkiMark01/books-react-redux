@@ -94,6 +94,13 @@
       @media (max-width: 369px) {
         margin-top: 0px;
       }
+
+      .cart__emptyBlock {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
     }
   }
 }
