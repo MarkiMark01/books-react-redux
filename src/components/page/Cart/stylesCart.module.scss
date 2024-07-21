@@ -90,5 +90,10 @@
       min-height: 100vh;
       width: 100%;
       padding: 0px;
+
+      @media (max-width: 369px) {
+        margin-top: 0px;
+      }
+    }
   }
 }
