@@ -101,6 +101,14 @@
         justify-content: center;
         align-items: center;
         height: 90vh;
+
+        .cart__empty {
+          font-size: 20px;
+          color: $color-darkblue;
+          font-weight: 700;
+          margin: 0;
+        }
+      }
     }
   }
 }
