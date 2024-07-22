@@ -231,6 +231,16 @@
               height: 22px;
             }
           }
+          .item2 {
+            display: grid;
+            height: 29px;
+            justify-items: center;
+            align-items: center;
+            color: $color-white;
+            background-color: $color-blue;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Montserrat Alternates", sans-serif;
         }
       }
     }
