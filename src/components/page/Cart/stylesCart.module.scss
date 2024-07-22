@@ -187,6 +187,12 @@
             right: 8px;
           }
         }
+        .wrapper {
+          display: grid;
+          width: 70%;
+          grid-template-columns: 3fr 1fr 1fr 1fr;
+          border-radius: 20px;
+
       }
     }
   }
