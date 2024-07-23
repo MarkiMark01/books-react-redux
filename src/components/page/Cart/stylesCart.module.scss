@@ -309,6 +309,18 @@
               height: 22px;
             }
           }
+          .item4 {
+            display: grid;
+            height: 29px;
+            justify-items: center;
+            align-items: center;
+            color: $color-white;
+            background-color: $color-blue;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Montserrat Alternates", sans-serif;
+            border-radius: 0px 20px 0px 0px;
+            padding-right: 4px;
         }
       }
     }
