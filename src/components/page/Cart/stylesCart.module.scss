@@ -350,6 +350,16 @@
               height: 22px;
             }
           }
+          .item5 {
+            min-height: 40px;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            color: $color-darkblue;
+            background-color: $color-white;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: "Montserrat Alternates", sans-serif;
         }
       }
     }
