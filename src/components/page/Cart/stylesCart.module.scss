@@ -522,6 +522,14 @@
             }
           }
         }
+        .cart__totalSum {
+          @extend %flex-end;
+          width: 70%;
+          font-size: 22px;
+          font-weight: 600;
+          color: $color-darkblue;
+          margin-top: 20px;
+          padding-right: 20px;
       }
     }
   }
