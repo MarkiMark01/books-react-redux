@@ -458,6 +458,30 @@
             font-weight: 600;
             font-family: "Montserrat Alternates", sans-serif;
             //  padding-right: 4px;
+
+            @media (max-width: 860px) {
+              font-size: 15px;
+            }
+            @media (max-width: 580px) {
+              font-size: 14px;
+              padding-right: 2px;
+            }
+            @media (max-width: 520px) {
+              font-size: 13px;
+            }
+            @media (max-width: 490px) {
+              font-size: 11px;
+            }
+            @media (max-width: 440px) {
+              font-size: 10px;
+            }
+            @media (max-width: 440px) {
+              font-size: 9px;
+            }
+            @media (max-width: 350px) {
+              font-size: 8px;
+            }
+          }
         }
       }
     }
