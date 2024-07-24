@@ -448,6 +448,16 @@
               font-size: 8px;
             }
           }
+          .item8 {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            color: $color-darkblue;
+            background-color: $color-white;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: "Montserrat Alternates", sans-serif;
+            //  padding-right: 4px;
         }
       }
     }
