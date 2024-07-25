@@ -1,3 +1,4 @@
+
 import React from "react";
 import { render, screen } from "@testing-library/react";
 
@@ -8,6 +9,7 @@ const CartTotal = ({ cart }) => {
 
     return <div>Total: ${totalSum}</div>;
 };
+
 test("calculates total sum of cart items correctly", () => {
     const cart = [
         { id: 1, totalPrice: "10.00" },
