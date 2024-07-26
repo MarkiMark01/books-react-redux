@@ -22,6 +22,17 @@ const Logout = () => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
 
+  const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    localStorage.setItem(LANGUAGE_KEY, selectedLanguage);
+  }, [selectedLanguage]);
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setSelectedLanguage(lng);
+  };
+
   const onLogout = () => {
     dispatch(logout());
     // return <Navigate to={"/"} />;
