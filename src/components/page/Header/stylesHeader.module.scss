@@ -23,4 +23,34 @@
     top: 0;
     z-index: 10;
     margin-right: 5px;
+
+    @media (max-width: 1850px) {
+        width: 66%;
+      }
+      @media (max-width: 1750px) {
+        width: 70%;
+      }
+      @media (max-width: 1670px) {
+        width: 74%;
+      }
+      @media (max-width: 1605px) {
+        width: 77%;
+      }
+      @media (max-width: 1505px) {
+        width: 82%;
+      }
+      @media (max-width: 1450px) {
+        width: 85%;
+      }
+      @media (max-width: 1400px) {
+        width: 88%;
+      }
+      @media (max-width: 1350px) {
+        width: 91%;
+      }
+      @media (max-width: 1300px) {
+        width: 96%;
+      }
+
+      
 }
