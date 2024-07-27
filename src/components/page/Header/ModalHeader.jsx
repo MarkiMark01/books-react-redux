@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { NavLink } from "react-router-dom";
-import useMenuItems from "../../shared/hooks/useMenuItems"; // Use the custom hook
+import useMenuItems from "../../shared/hooks/useMenuItems";
 import styles from "./stylesModHead.module.scss";
 import useModal from "../../shared/hooks/useModal";
 import { useTranslation } from "react-i18next";
-
 import usa from "../../../Assets/usa.png";
 import ua from "../../../Assets/ua.png";
 
@@ -15,13 +14,17 @@ export default function ModalHeader({ onClose }) {
   const { t, i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
+  useEffect(() => {
+    localStorage.setItem("language", selectedLanguage);
+  }, [selectedLanguage]);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setSelectedLanguage(lng);
   };
 
   useModal(onClose);
-  const menuItems = useMenuItems(); // Use the custom hook
+  const menuItems = useMenuItems();
 
   const handleBackdropClick = (e) => {
     if (e.currentTarget === e.target) {
