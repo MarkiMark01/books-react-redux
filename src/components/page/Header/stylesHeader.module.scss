@@ -106,5 +106,9 @@
     .header__burger::after {
       bottom: 0;
     }
+
+    .header__burger.active span {
+      transform: scale(0);
+    }
   }
 }
