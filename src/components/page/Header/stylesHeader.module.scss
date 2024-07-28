@@ -89,5 +89,14 @@
         display: flex;
       }
     }
+    .header__burger::before,
+    .header__burger::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      transition: all 0.1s ease 0s;
+    }
   }
 }
