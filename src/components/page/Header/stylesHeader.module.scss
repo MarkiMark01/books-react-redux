@@ -98,5 +98,9 @@
       background-color: #fff;
       transition: all 0.1s ease 0s;
     }
+
+    .header__burger::before {
+      top: 0;
+    }
   }
 }
