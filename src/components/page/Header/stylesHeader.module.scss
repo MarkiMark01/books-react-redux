@@ -114,5 +114,9 @@
       top: 50%;
       transform: rotate(-45deg) translate(0, -50%);
     }
+    .header__burger.active::after {
+      top: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+    }
   }
 }
