@@ -161,4 +161,9 @@
     @media (max-width: 450px) {
       width: 150px;
     }
+
+    .btnFlags {
+      @extend %flex-sb;
+      width: 50px;
+      margin-right: 10px;
 }
