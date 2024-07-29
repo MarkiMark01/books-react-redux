@@ -110,5 +110,9 @@
     .header__burger.active span {
       transform: scale(0);
     }
+    .header__burger.active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+    }
   }
 }
