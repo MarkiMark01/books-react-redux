@@ -166,4 +166,8 @@
       @extend %flex-sb;
       width: 50px;
       margin-right: 10px;
+
+      @media (max-width: 899px) {
+        display: none;
+      }
 }
