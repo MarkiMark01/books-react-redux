@@ -140,5 +140,12 @@
       font-weight: 600;
       cursor: pointer;
     }
+    .link.active {
+      @extend %flex-center;
+      width: 99px;
+      height: 29px;
+      background-color: $color-blue;
+      border-radius: 15px;
+    }
   }
 }
