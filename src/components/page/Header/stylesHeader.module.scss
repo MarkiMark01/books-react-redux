@@ -177,5 +177,13 @@
         cursor: pointer;
       }
     }
+
+    .logout__name {
+      font-size: 17px;
+      color: $color-white;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
   }
 }
