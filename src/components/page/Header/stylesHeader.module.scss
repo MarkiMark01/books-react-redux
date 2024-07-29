@@ -170,4 +170,12 @@
       @media (max-width: 899px) {
         display: none;
       }
+
+      .flags {
+        width: 23px;
+        height: 23px;
+        cursor: pointer;
+      }
+    }
+  }
 }
