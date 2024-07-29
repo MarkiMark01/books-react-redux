@@ -204,5 +204,16 @@
         margin-right: 3px;
       }
     }
+    .logout__btn {
+      @extend %flex-center;
+      width: 65px;
+      height: 30px;
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 15px;
+      background-color: $color-blue;
+      color: $color-white;
+      border: 1.5px solid $color-white;
+      cursor: pointer;
   }
 }
