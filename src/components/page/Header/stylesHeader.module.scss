@@ -118,5 +118,13 @@
       top: 50%;
       transform: rotate(45deg) translate(0, 50%);
     }
+    .nav {
+      @extend %flex-center;
+      list-style: none;
+      text-decoration: none;
+      margin: 0;
+      margin-left: 5px;
+      padding: 0px;
+
   }
 }
