@@ -282,3 +282,13 @@
   position: sticky;
   top: 0;
   z-index: 1;
+
+  .headerRegister2 {
+    @extend %flex-sb;
+    width: 64%;
+    height: 40px;
+    background-color: $color-darkblue;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin-right: 5px;
