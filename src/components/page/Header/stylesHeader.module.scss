@@ -216,7 +216,6 @@
       border: 1.5px solid $color-white;
       cursor: pointer;
 
-
       @media (max-width: 650px) {
         width: 58px;
         // height: 27px;
@@ -235,5 +234,13 @@
         font-size: 9px;
         font-weight: 500;
       }
+
+      &:hover {
+        background: $color-linear-gradient;
+        color: #001838;
+        transition: 0.25s;
+        border: 1.5px solid $color-white;
+      }
+    }
   }
 }
