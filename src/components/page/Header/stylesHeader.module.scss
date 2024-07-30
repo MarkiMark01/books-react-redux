@@ -215,5 +215,25 @@
       color: $color-white;
       border: 1.5px solid $color-white;
       cursor: pointer;
+
+
+      @media (max-width: 650px) {
+        width: 58px;
+        // height: 27px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      @media (max-width: 550px) {
+        // width: 87px;
+        height: 26px;
+        font-size: 11px;
+        font-weight: 500;
+      }
+      @media (max-width: 450px) {
+        // width: 72px;
+        height: 25px;
+        font-size: 9px;
+        font-weight: 500;
+      }
   }
 }
