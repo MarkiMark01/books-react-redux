@@ -297,3 +297,10 @@
       @extend %flex-sb;
       width: 50px;
       margin-right: 15px;
+
+      @media (max-width: 375px) {
+        width: 48px;
+      }
+      @media (max-width: 319px) {
+        width: 46px;
+      }
