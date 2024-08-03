@@ -53,3 +53,11 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+.link.active {
+  @extend %flex-center;
+  width: 100px;
+  height: 30px;
+  background-color: $color-blue;
+  border-radius: 15px;
+}
