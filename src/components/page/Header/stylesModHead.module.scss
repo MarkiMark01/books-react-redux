@@ -61,3 +61,14 @@
   background-color: $color-blue;
   border-radius: 15px;
 }
+
+.nav {
+  @extend %flex-center;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 0px;
+}
