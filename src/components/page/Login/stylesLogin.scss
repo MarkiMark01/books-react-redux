@@ -6,4 +6,14 @@
   flex-direction: column;
   height: 100vh;
   background-color: $color-lightgrey;
+
+  .loginBox {
+    @extend %flex-center;
+    flex-direction: column;
+    width: 350px;
+    height: 450px;
+    background-color: $color-lightblue;
+    border-radius: 15px;
+    border: 2px solid $color-gold;
+
 }
