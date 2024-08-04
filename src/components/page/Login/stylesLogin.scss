@@ -1,2 +1,9 @@
 @import "../../shared/styles/variables";
 @import "../../shared/styles/placeholders";
+
+.login {
+  @extend %flex-center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $color-lightgrey;
+}
