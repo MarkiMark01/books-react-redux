@@ -33,5 +33,19 @@
         // height: 460px;
       }
 
-      
+      .googleBtn {
+        @extend %flex-center;
+        width: 276px;
+        height: 38px;
+        font-size: 17px;
+        font-weight: 500;
+        font-family: "Open Sans", sans-serif;
+        // border: 1px solid #dadce0;
+        border: 1px solid $color-gold;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        background-color: #fff;
+        color: #3c4043;
+        cursor: pointer;
+  
 }
