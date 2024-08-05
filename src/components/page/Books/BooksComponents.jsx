@@ -76,13 +76,13 @@ const BooksComponents = ({
                           type="button"
                           onClick={() => {
                             handleView(book);
-                            if (!isLogin) {
-                              alert(
-                                t(
-                                  "Enter your login and password or sign up, please :)"
-                                )
-                              );
-                            }
+                            // if (!isLogin) {
+                            //   alert(
+                            //     t(
+                            //       "Enter your login and password or sign up, please :)"
+                            //     )
+                            //   );
+                            // }
                           }}
                           className={styles.books__button}
                         >
