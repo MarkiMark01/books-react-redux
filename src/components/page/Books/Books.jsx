@@ -63,7 +63,6 @@ const Books = () => {
       error={error}
       filteredBooks={filteredBooks}
       handleView={handleView}
-      isLogin={isLogin}
       textFilter={textFilter}
       priceFilter={priceFilter}
       handlePriceFilter={handlePriceFilter}
