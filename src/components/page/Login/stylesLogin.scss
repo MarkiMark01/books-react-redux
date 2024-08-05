@@ -139,4 +139,15 @@
           border: 2px solid $color-darkblue;
         }
       }
+
+      .login__sign {
+        text-align: start;
+        height: 40px;
+        width: 276px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 20px;
+        border: 2px solid $color-gold;
+        padding: 10px;
+        outline: none;
 }
