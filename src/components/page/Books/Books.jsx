@@ -44,6 +44,10 @@ const Books = () => {
   };
 
   const handleView = (book) => {
+    if (!isLogin) {
+      navigate("/login");
+      return;
+    }
     dispatch(setUniqueBook(book));
     navigate(`/books/${book.id}`);
     setTextFilter("");
