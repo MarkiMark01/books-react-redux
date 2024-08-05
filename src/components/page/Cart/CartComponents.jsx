@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./styles.Cart.module.scss";
 import cartImg from "../../../Assets/cart.svg";
 import bin from "../../../Assets/bin.png";
-import ModalWindow from "../Modal/Modal";
+import ModalWindow from "../Modal/ModalCart";
 
 const CartComponents = ({
   goToBack,
