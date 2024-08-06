@@ -212,4 +212,8 @@
         &::placeholder {
           color: rgba(165, 163, 163, 0.671);
         }
+        &:focus {
+          border: 2px solid $color-darkblue;
+        }
+      }
 }
