@@ -150,4 +150,24 @@
         border: 2px solid $color-gold;
         padding: 10px;
         outline: none;
+
+        @media (max-width: 650px) {
+          height: 38px;
+          width: 250px;
+          font-size: 13px;
+        }
+
+        @media (max-width: 450px) {
+          height: 36px;
+          width: 240px;
+        }
+
+        @media (max-width: 375px) {
+          height: 34px;
+          width: 230px;
+        }
+        @media (max-width: 358px) {
+          height: 33px;
+          width: 220px;
+        }
 }
