@@ -269,5 +269,26 @@
           color: $color-darkblue;
           border: 2px solid $color-darkblue;
         }
+
+        @media (max-width: 650px) {
+            width: 250px;
+            // height: 43px;
+            // margin-bottom: 10px;
+          }
+          @media (max-width: 450px) {
+            width: 240px;
+            height: 35px;
+            font-size: 16px;
+          }
+          @media (max-width: 375px) {
+            width: 230px;
+            font-size: 15px;
+          }
+          @media (max-width: 360px) {
+            width: 220px;
+          }
+
+        }
+      }
 }
 
