@@ -263,4 +263,11 @@
         padding: 15px;
         margin-top: 0px;
         padding-bottom: 0;
+
+        &:hover {
+          background-color: $color-gold;
+          color: $color-darkblue;
+          border: 2px solid $color-darkblue;
+        }
 }
+
