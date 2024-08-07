@@ -17,64 +17,64 @@
     border: 2px solid $color-gold;
 
     @media (max-width: 650px) {
-        width: 300px;
-        height: 420px;
+      width: 300px;
+      height: 420px;
+    }
+    @media (max-width: 450px) {
+      width: 280px;
+      height: 400px;
+    }
+    @media (max-width: 375px) {
+      width: 270px;
+      height: 385px;
+    }
+    @media (max-width: 360px) {
+      width: 260px;
+      // height: 460px;
+    }
+
+    .googleBtn {
+      @extend %flex-center;
+      width: 276px;
+      height: 38px;
+      font-size: 17px;
+      font-weight: 500;
+      font-family: "Open Sans", sans-serif;
+      // border: 1px solid #dadce0;
+      border: 1px solid $color-gold;
+      border-radius: 20px;
+      margin-bottom: 15px;
+      background-color: #fff;
+      color: #3c4043;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+
+      @media (max-width: 650px) {
+        width: 248px;
+        // height: 43px;
       }
       @media (max-width: 450px) {
-        width: 280px;
-        height: 400px;
+        width: 240px;
+        height: 35px;
+        font-size: 16px;
       }
       @media (max-width: 375px) {
-        width: 270px;
-        height: 385px;
+        width: 230px;
+        font-size: 15px;
       }
       @media (max-width: 360px) {
-        width: 260px;
-        // height: 460px;
+        width: 220px;
       }
+    }
 
-      .googleBtn {
-        @extend %flex-center;
-        width: 276px;
-        height: 38px;
-        font-size: 17px;
-        font-weight: 500;
-        font-family: "Open Sans", sans-serif;
-        // border: 1px solid #dadce0;
-        border: 1px solid $color-gold;
-        border-radius: 20px;
-        margin-bottom: 15px;
-        background-color: #fff;
-        color: #3c4043;
-        cursor: pointer;
-  
-        &:hover {
-            background-color: #f8f8f8;
-        }
+    .login__container2 {
+      margin-top: 35px;
+    }
 
-        @media (max-width: 650px) {
-            width: 248px;
-            // height: 43px;
-          }
-          @media (max-width: 450px) {
-            width: 240px;
-            height: 35px;
-            font-size: 16px;
-          }
-          @media (max-width: 375px) {
-            width: 230px;
-            font-size: 15px;
-          }
-          @media (max-width: 360px) {
-            width: 220px;
-          }
-        }
-
-        .login__container2 {
-            margin-top: 35px;
-        }
-
-        .login__container,
+    .login__container,
     .login__container2 {
       display: flex;
       align-items: center;
@@ -131,7 +131,7 @@
           // height: 33px;
           width: 220px;
         }
-        
+
         &::placeholder {
           color: rgba(165, 163, 163, 0.671);
         }
@@ -271,28 +271,38 @@
         }
 
         @media (max-width: 650px) {
-            width: 250px;
-            // height: 43px;
-            // margin-bottom: 10px;
-          }
-          @media (max-width: 450px) {
-            width: 240px;
-            height: 35px;
-            font-size: 16px;
-          }
-          @media (max-width: 375px) {
-            width: 230px;
-            font-size: 15px;
-          }
-          @media (max-width: 360px) {
-            width: 220px;
-          }
-
+          width: 250px;
+          // height: 43px;
+          // margin-bottom: 10px;
+        }
+        @media (max-width: 450px) {
+          width: 240px;
+          height: 35px;
+          font-size: 16px;
+        }
+        @media (max-width: 375px) {
+          width: 230px;
+          font-size: 15px;
+        }
+        @media (max-width: 360px) {
+          width: 220px;
         }
       }
-      .login__text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
+    }
+    .login__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      @media (max-width: 650px) {
+        font-size: 15px;
+      }
+      @media (max-width: 450px) {
+        font-size: 14px;
+      }
+      @media (max-width: 450px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
