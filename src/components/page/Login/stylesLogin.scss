@@ -323,4 +323,9 @@
     font-size: 18px;
     margin-bottom: 0px;
     font-family: " Salsa";
+
+    @media (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
 }
