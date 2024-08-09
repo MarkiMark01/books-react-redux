@@ -21,12 +21,10 @@ const CartComponents = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
-    console.log("Opening modal");
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    console.log("Closing modal");
     setIsModalOpen(false);
   };
 
