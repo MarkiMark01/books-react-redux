@@ -1,6 +1,9 @@
 import React from "react";
+import { createPortal } from "react-dom";
 import styles from "./stylesModal.module.scss";
 import useModal from "../../shared/hooks/useModal";
+
+const modalRoot = document.querySelector("#modal-root");
 
 export default function ModalWindow({ onClose }) {
   useModal(onClose);
@@ -11,21 +14,17 @@ export default function ModalWindow({ onClose }) {
     }
   };
 
-  return (
-    (
-      <div className={styles.modal__backdrop} onClick={handleBackdropClick}>
-        <div className={styles.modal__content2}>
-          <section className={styles.modal__login}>
-            <article>
-              Enter your email and password or log in, please :)
-            </article>
-            <button className={styles.modal__ok} onClick={handleBackdropClick}>
-              Ok
-            </button>
-          </section>
-        </div>
+  return createPortal(
+    <div className={styles.modal__backdrop} onClick={handleBackdropClick}>
+      <div className={styles.modal__content2}>
+        <section className={styles.modal__login}>
+          <article>Enter your email and password or log in, please :)</article>
+          <button className={styles.modal__ok} onClick={handleBackdropClick}>
+            Ok
+          </button>
+        </section>
       </div>
-    ),
+    </div>,
     modalRoot
   );
 }
