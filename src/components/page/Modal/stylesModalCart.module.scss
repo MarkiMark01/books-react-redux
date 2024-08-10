@@ -24,3 +24,11 @@
       @media (max-width: 430px) {
         top: 49%;
       }
+      .modal__giftBox {
+        @media (max-width: 419px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
