@@ -29,6 +29,10 @@ const Login = () => {
     setIsModalOpen(true);
   };
 
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const onLogin = (e) => {
     e.preventDefault();
     if (email.trim() === "" || password.trim() === "") {
