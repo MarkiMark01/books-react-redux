@@ -10,6 +10,7 @@ import { login } from "../../redux/auth/auth-operations";
 import { googleLoginSuccess } from "../../redux/auth/auth-slice";
 import styles from "./stylesLogin.module.scss";
 import IconGoogle from "../../../Assets/IconGoogle";
+import ModalWindow from "../Modal/ModalLogin";
 // import { GoogleLogin } from "@react-oauth/google";
 // import { jwtDecode } from "jwt-decode";
 // import google from "../../../Assets/google.png";
@@ -18,6 +19,7 @@ const Login = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const navigate = useNavigate();
   const isLogin = useAuth();
