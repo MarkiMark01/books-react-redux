@@ -36,8 +36,7 @@ const Login = () => {
   const onLogin = (e) => {
     e.preventDefault();
     if (email.trim() === "" || password.trim() === "") {
-      alert(t("Enter your login and password or sign up, please :)"));
-      return;
+      openModal();
     }
     const data = { email, password };
     dispatch(login(data));
