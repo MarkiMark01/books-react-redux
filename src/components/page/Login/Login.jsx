@@ -25,6 +25,10 @@ const Login = () => {
   const isLogin = useAuth();
   const dispatch = useDispatch();
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   const onLogin = (e) => {
     e.preventDefault();
     if (email.trim() === "" || password.trim() === "") {
