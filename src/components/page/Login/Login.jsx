@@ -161,6 +161,7 @@ const Login = () => {
             </NavLink>
           </section>
         </section>
+        {isModalOpen && <ModalWindow onClose={closeModal}></ModalWindow>}
       </main>
     </>
   );
