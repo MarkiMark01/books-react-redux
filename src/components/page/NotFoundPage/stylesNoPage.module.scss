@@ -34,5 +34,9 @@
     &:hover {
       color: #d8af69;
     }
+    @media (max-width: 400px) {
+      font-size: 13px;
+      font-weight: 600;
+    }
   }
 }
