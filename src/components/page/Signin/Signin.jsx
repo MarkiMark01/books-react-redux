@@ -11,11 +11,13 @@ import { googleLoginSuccess } from "../../redux/auth/auth-slice";
 import useAuth from "../../shared/hooks/useAuth";
 import styles from "./stylesSignin.module.scss";
 import IconGoogle from "../../../Assets/IconGoogle";
+import ModalWindow from "../Modal/ModalSignUp";
 
 const Signin = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const { status, message } = useSelector(getAuthError);
   const isLogin = useAuth();
@@ -136,6 +138,7 @@ const Signin = () => {
           </section>
           {status && <p className={styles.login__status}>{message}</p>}
         </section>
+        {isModalOpen && <ModalWindow onClose={closeModal}></ModalWindow>}
       </main>
     </>
   );
