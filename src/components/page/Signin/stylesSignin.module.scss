@@ -15,3 +15,20 @@
         background-color: $color-lightblue;
         border-radius: 15px;
         border: 2px solid $color-gold;
+
+        @media (max-width: 650px) {
+            width: 300px;
+            height: 420px;
+          }
+          @media (max-width: 450px) {
+            width: 280px;
+            height: 400px;
+          }
+          @media (max-width: 375px) {
+            width: 270px;
+            height: 385px;
+          }
+          @media (max-width: 360px) {
+            width: 260px;
+            // height: 460px;
+          }
