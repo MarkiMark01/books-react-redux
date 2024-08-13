@@ -37,7 +37,9 @@ const Signin = () => {
 
   const onRegister = (e) => {
     e.preventDefault();
-
+    if (email.trim() === "" || password.trim() === "") {
+      openModal();
+    }
     const data = { name, email, password };
     dispatch(signup(data));
     setName("");
