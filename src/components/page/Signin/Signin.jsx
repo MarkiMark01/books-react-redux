@@ -30,6 +30,11 @@ const Signin = () => {
     setIsModalOpen(true);
   };
 
+  const closeModal = () => {
+    console.log("Closing modal");
+    setIsModalOpen(false);
+  };
+
   const onRegister = (e) => {
     e.preventDefault();
 
