@@ -26,6 +26,10 @@ const Signin = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
   const onRegister = (e) => {
     e.preventDefault();
 
@@ -35,14 +39,6 @@ const Signin = () => {
     setEmail("");
     setPassword("");
   };
-
-  // const handleReturnLogin = () => {
-  //   navigate("/login");
-  // };
-
-  // const handleReturnBack = () => {
-  //   navigate(-1);
-  // };
 
   const loginGoogle = useGoogleLogin({
     onSuccess: async (response) => {
@@ -104,20 +100,6 @@ const Signin = () => {
                 className={styles.login__sign}
               />
               <section className={styles.login__buttons}>
-                {/* <button
-                  type="button"
-                  onClick={handleReturnBack}
-                  className={styles.login__btn}
-                >
-                  {t("Back")}
-                </button>
-                <button
-                  type="button"
-                  className={styles.login__btn}
-                  onClick={handleReturnLogin}
-                >
-                  {t("Log in")}
-                </button> */}
                 <button type="submit" className={styles.login__btn}>
                   {t("Register")}
                 </button>
