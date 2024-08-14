@@ -71,3 +71,13 @@
             .login__container2 {
               margin-top: 10px;
             }
+
+            .login__container,
+    .login__container2 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+      width: 350px;
+      height: 340px;
+      margin-bottom: 5px;
