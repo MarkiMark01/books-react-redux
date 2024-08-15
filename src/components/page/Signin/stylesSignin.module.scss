@@ -204,3 +204,6 @@
           height: 33px;
           width: 220px;
         }
+                &::placeholder {
+          color: rgba(165, 163, 163, 0.671);
+        }
