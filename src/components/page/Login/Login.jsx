@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next";
 import { useGoogleLogin } from "@react-oauth/google";
 
 import useAuth from "../../shared/hooks/useAuth";
-import { login } from "../../redux/auth/auth-operations";
-import { googleLoginSuccess } from "../../redux/auth/auth-slice";
+import { login } from "../../redux/auth/authOperations";
+import { googleLoginSuccess } from "../../redux/auth/authSlice";
 import styles from "./stylesLogin.module.scss";
 import IconGoogle from "../../../Assets/IconGoogle";
 import ModalWindow from "../Modal/ModalLogin";

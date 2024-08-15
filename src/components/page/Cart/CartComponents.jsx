@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import styles from "./styles.Cart.module.scss";
+import styles from "./stylesCart.module.scss";
 import cartImg from "../../../Assets/cart.svg";
 import bin from "../../../Assets/bin.png";
 import ModalWindow from "../Modal/ModalCart";
@@ -71,7 +71,7 @@ const CartComponents = ({
                 <section>
                   <img
                     src={bin}
-                    alt={t("Remove")}
+                    alt={t("Remove bin")}
                     onClick={() => handleRemoveFromCart(item)}
                     className={styles.img}
                   />

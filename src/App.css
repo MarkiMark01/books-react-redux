@@ -1,7 +1,16 @@
 .App {
   text-align: center;
 }
-
+body {
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", "Arial", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: inherit;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

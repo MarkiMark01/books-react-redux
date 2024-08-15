@@ -4,9 +4,9 @@ import {
   getUser,
   isGoogleAuth,
   getGoogleUser,
-} from "../../redux/auth/auth-selectors";
-import { logout } from "../../redux/auth/auth-operations";
-import { googleLogout } from "../../redux/auth/auth-slice"; // Import the googleLogout action
+} from "../../redux/auth/authSelectors";
+import { logout } from "../../redux/auth/authOperations";
+import { googleLogout } from "../../redux/auth/authSlice"; // Import the googleLogout action
 import { useTranslation } from "react-i18next";
 import styles from "../Header/stylesHeader.module.scss";
 
@@ -62,7 +62,7 @@ const Logout = () => {
           style={{ opacity: selectedLanguage === "uk" ? 0.6 : 1 }}
         />
       </section>
-      <img src={icon} alt="Icon" className={styles.logout__icon} />
+      <img src={icon} alt="Avatar" className={styles.logout__icon} />
       <span className={styles.logout__name}>
         {isGoogleLogin ? googleUser.name : user.name}
       </span>

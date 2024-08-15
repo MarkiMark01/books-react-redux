@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
-import { Loader } from "../shared/Loader";
+import { Loader } from "../shared/loader";
 
 const Books = lazy(() => import("./Books/Books"));
 const Login = lazy(() => import("./Login/Login"));

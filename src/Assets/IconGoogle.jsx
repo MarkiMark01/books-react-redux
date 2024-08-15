@@ -1,4 +1,6 @@
-import styles from "../components/page/Login/stylesLogin.module.scss";
+import React from "react";
+// import styles from "../components/page/Login/stylesLogin.module.scss";
+import styles from "../components/shared/styles/stylesGoogleIcon.module.scss";
 
 const IconGoogle = () => {
   return (

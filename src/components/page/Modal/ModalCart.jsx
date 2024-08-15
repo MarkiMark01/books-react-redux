@@ -19,7 +19,7 @@ export default function ModalWindow({ onClose }) {
     <div className={styles.modal__backdrop} onClick={handleBackdropClick}>
       <div className={styles.modal__content}>
         <div className={styles.modal__giftBox}>
-          <img src={gift} alt="Gift" className={styles.gift} />
+          <img src={gift} alt="Gift 'Thank you'" className={styles.gift} />
           <button className={styles.modal__ok} onClick={handleBackdropClick}>
             Ok
           </button>

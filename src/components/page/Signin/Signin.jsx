@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { useGoogleLogin } from "@react-oauth/google";
 
-import { signup } from "../../redux/auth/auth-operations";
-import { getAuthError } from "../../redux/auth/auth-selectors";
-import { googleLoginSuccess } from "../../redux/auth/auth-slice";
+import { signup } from "../../redux/auth/authOperations";
+import { getAuthError } from "../../redux/auth/authSelectors";
+import { googleLoginSuccess } from "../../redux/auth/authSlice";
 import useAuth from "../../shared/hooks/useAuth";
 import styles from "./stylesSignin.module.scss";
 import IconGoogle from "../../../Assets/IconGoogle";

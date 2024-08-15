@@ -13,3 +13,12 @@ export const getNewBooks = async () => {
         throw error;
     }
 };
+export const getNewUniqueBooks = async (id) => {
+    try {
+        const result = await instance.get(`/books/${id}`);
+        return result.data;
+    } catch (error) {
+        console.error("Error fetching new contacts:", error);
+        throw error;
+    }
+};

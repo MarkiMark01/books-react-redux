@@ -15,3 +15,5 @@ const useModal = (onClose) => {
         };
     }, [onClose]);
 };
+
+export default useModal;

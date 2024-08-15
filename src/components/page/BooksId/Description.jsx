@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUniqueBooks } from "../../redux/books/booksOperations";
-import styles from "./styles.BookId.module.scss";
+import styles from "./stylesBookId.module.scss";
 import { useTranslation } from "react-i18next";
 
 const Description = () => {

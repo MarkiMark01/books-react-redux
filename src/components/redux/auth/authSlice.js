@@ -1,6 +1,6 @@
 
 import { createSlice } from "@reduxjs/toolkit";
-import { signup, login, logout, current } from "./auth-operations";
+import { signup, login, logout, current } from "./authOperations";
 
 const initialState = {
     user: {},
@@ -128,8 +128,4 @@ const authSlice = createSlice({
 
 export const { googleLoginSuccess, googleLogout } = authSlice.actions;
 export default authSlice.reducer;
-
-
-
-
 

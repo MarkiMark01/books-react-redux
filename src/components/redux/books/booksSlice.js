@@ -13,7 +13,18 @@ const booksSlice = createSlice({
     name: "books",
     initialState,
     reducers: {
-
+        setUniqueBook(state, action) {
+            state.uniqueBook = action.payload;
+        },
+        addToCart(state, action) {
+            state.cart.push(action.payload);
+        },
+        removeFromCart(state, action) {
+            state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+        },
+        clearCart(state) {
+            state.cart = [];
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -29,6 +40,21 @@ const booksSlice = createSlice({
                 state.isLoading = false;
                 state.error = action.error.message;
             })
+            .addCase(getUniqueBooks.pending, (state) => {
+                state.isLoading = true;
+                state.error = null;
+            })
+            .addCase(getUniqueBooks.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.uniqueBook = action.payload;
+            })
+            .addCase(getUniqueBooks.rejected, (state, action) => {
+                state.isLoading = false;
+                state.error = action.error.message;
+            })
+            .addCase(fetchCart.fulfilled, (state, action) => {
+                state.cart = action.payload;
+            });
     },
 });
 
