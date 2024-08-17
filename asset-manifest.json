@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/books-react-redux/static/css/main.ea77ab5b.css",
-    "main.js": "/books-react-redux/static/js/main.159f8400.js",
+    "main.js": "/books-react-redux/static/js/main.f22e33e7.js",
     "static/js/952.5f47cd23.chunk.js": "/books-react-redux/static/js/952.5f47cd23.chunk.js",
     "static/css/483.e4913c41.chunk.css": "/books-react-redux/static/css/483.e4913c41.chunk.css",
     "static/js/483.bc4933f0.chunk.js": "/books-react-redux/static/js/483.bc4933f0.chunk.js",
-    "static/js/414.5fa55f8b.chunk.js": "/books-react-redux/static/js/414.5fa55f8b.chunk.js",
+    "static/js/414.ffb031ed.chunk.js": "/books-react-redux/static/js/414.ffb031ed.chunk.js",
     "static/js/961.ee1e7bc3.chunk.js": "/books-react-redux/static/js/961.ee1e7bc3.chunk.js",
     "static/css/706.018f7971.chunk.css": "/books-react-redux/static/css/706.018f7971.chunk.css",
     "static/js/706.4cae5b3f.chunk.js": "/books-react-redux/static/js/706.4cae5b3f.chunk.js",
@@ -26,11 +26,11 @@
     "static/media/cart.svg": "/books-react-redux/static/media/cart.5a1c3c755c07e59db7d65be6bc8d8bfb.svg",
     "index.html": "/books-react-redux/index.html",
     "main.ea77ab5b.css.map": "/books-react-redux/static/css/main.ea77ab5b.css.map",
-    "main.159f8400.js.map": "/books-react-redux/static/js/main.159f8400.js.map",
+    "main.f22e33e7.js.map": "/books-react-redux/static/js/main.f22e33e7.js.map",
     "952.5f47cd23.chunk.js.map": "/books-react-redux/static/js/952.5f47cd23.chunk.js.map",
     "483.e4913c41.chunk.css.map": "/books-react-redux/static/css/483.e4913c41.chunk.css.map",
     "483.bc4933f0.chunk.js.map": "/books-react-redux/static/js/483.bc4933f0.chunk.js.map",
-    "414.5fa55f8b.chunk.js.map": "/books-react-redux/static/js/414.5fa55f8b.chunk.js.map",
+    "414.ffb031ed.chunk.js.map": "/books-react-redux/static/js/414.ffb031ed.chunk.js.map",
     "961.ee1e7bc3.chunk.js.map": "/books-react-redux/static/js/961.ee1e7bc3.chunk.js.map",
     "706.018f7971.chunk.css.map": "/books-react-redux/static/css/706.018f7971.chunk.css.map",
     "706.4cae5b3f.chunk.js.map": "/books-react-redux/static/js/706.4cae5b3f.chunk.js.map",
@@ -46,6 +46,6 @@
   },
   "entrypoints": [
     "static/css/main.ea77ab5b.css",
-    "static/js/main.159f8400.js"
+    "static/js/main.f22e33e7.js"
   ]
 }
