@@ -48,10 +48,6 @@ const Register = () => {
               <section style={{ marginRight: "5px" }}>
                 <NavLink to="/login">{t("Log in")}</NavLink>
               </section>
-              |
-              <section style={{ marginLeft: "5px" }}>
-                <NavLink to="/register">{t("Sign up")}</NavLink>
-              </section>
             </section>
           </nav>
         </section>

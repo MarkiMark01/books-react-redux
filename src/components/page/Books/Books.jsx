@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { getBooks } from "../../redux/books/booksOperations";
 import { setUniqueBook } from "../../redux/books/booksSlice";
-import useAuth from "../../shared/hooks/useAuth";
 import BooksComponents from "./BooksComponents";
 
 const Books = () => {
   const books = useSelector((state) => state.books.books);
   const isLoading = useSelector((state) => state.books.isLoading);
   const error = useSelector((state) => state.books.error);
+  const user = useSelector((state) => state.auth.user);
 
   const dispatch = useDispatch();
 
@@ -17,8 +17,6 @@ const Books = () => {
   const [priceFilter, setPriceFilter] = useState("All books");
 
   const navigate = useNavigate();
-
-  const isLogin = useAuth();
 
   const filteredBooks = useMemo(() => {
     return books.filter((book) => {
@@ -46,7 +44,7 @@ const Books = () => {
   };
 
   const handleView = (book) => {
-    if (!isLogin) {
+    if (!user) {
       navigate("/login");
       return;
     }
@@ -65,7 +63,7 @@ const Books = () => {
       error={error}
       filteredBooks={filteredBooks}
       handleView={handleView}
-      isLogin={isLogin}
+      isLogin={!!user}
       textFilter={textFilter}
       priceFilter={priceFilter}
       handlePriceFilter={handlePriceFilter}
