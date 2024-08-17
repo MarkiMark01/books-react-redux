@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/books-react-redux/static/css/main.ea77ab5b.css",
-    "main.js": "/books-react-redux/static/js/main.f22e33e7.js",
+    "main.js": "/books-react-redux/static/js/main.2421d8e3.js",
     "static/js/952.5f47cd23.chunk.js": "/books-react-redux/static/js/952.5f47cd23.chunk.js",
     "static/css/483.e4913c41.chunk.css": "/books-react-redux/static/css/483.e4913c41.chunk.css",
     "static/js/483.bc4933f0.chunk.js": "/books-react-redux/static/js/483.bc4933f0.chunk.js",
@@ -26,7 +26,7 @@
     "static/media/cart.svg": "/books-react-redux/static/media/cart.5a1c3c755c07e59db7d65be6bc8d8bfb.svg",
     "index.html": "/books-react-redux/index.html",
     "main.ea77ab5b.css.map": "/books-react-redux/static/css/main.ea77ab5b.css.map",
-    "main.f22e33e7.js.map": "/books-react-redux/static/js/main.f22e33e7.js.map",
+    "main.2421d8e3.js.map": "/books-react-redux/static/js/main.2421d8e3.js.map",
     "952.5f47cd23.chunk.js.map": "/books-react-redux/static/js/952.5f47cd23.chunk.js.map",
     "483.e4913c41.chunk.css.map": "/books-react-redux/static/css/483.e4913c41.chunk.css.map",
     "483.bc4933f0.chunk.js.map": "/books-react-redux/static/js/483.bc4933f0.chunk.js.map",
@@ -46,6 +46,6 @@
   },
   "entrypoints": [
     "static/css/main.ea77ab5b.css",
-    "static/js/main.f22e33e7.js"
+    "static/js/main.2421d8e3.js"
   ]
 }
