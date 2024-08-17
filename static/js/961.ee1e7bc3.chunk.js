@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkbooks_react_redux=self.webpackChunkbooks_react_redux||[]).push([[961],{5961:(s,e,u)=>{u.r(e),u.d(e,{default:()=>o});var r=u(3216),t=u(9456),a=u(579);const o=()=>(0,t.d4)((s=>s.auth.user))?(0,a.jsx)(r.sv,{}):(0,a.jsx)(r.C5,{to:"/login"})}}]);
+//# sourceMappingURL=961.ee1e7bc3.chunk.js.map
