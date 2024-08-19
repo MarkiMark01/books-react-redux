@@ -13,6 +13,7 @@ const BooksComponents = ({
   priceFilter,
   handlePriceFilter,
   handleTextFilter,
+  user, // Додаємо проп user для перевірки стану користувача
 }) => {
   const { t } = useTranslation();
   const [localTextFilter, setLocalTextFilter] = useState(textFilter);
@@ -73,9 +74,7 @@ const BooksComponents = ({
                         <p className={styles.books__price}>${book.price}</p>
                         <button
                           type="button"
-                          onClick={() => {
-                            handleView(book);
-                          }}
+                          onClick={() => handleView(book)}
                           className={styles.books__button}
                         >
                           {t("View")}

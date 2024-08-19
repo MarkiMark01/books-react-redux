@@ -1,13 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  getUser,
-  isGoogleAuth,
-  getGoogleUser,
-} from "../../redux/auth/authSelectors";
-import { logout } from "../../redux/auth/authOperations";
-import { googleLogout } from "../../redux/auth/authSlice"; // Import the googleLogout action
+import { signOutUser } from "../../redux/auth/authSlice";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import styles from "../Header/stylesHeader.module.scss";
 
 import icon from "../../../Assets/pngegg.png";
@@ -17,25 +12,21 @@ import ua from "../../../Assets/ua.png";
 const LANGUAGE_KEY = "language";
 
 const Logout = () => {
-  const user = useSelector(getUser);
-  const googleUser = useSelector(getGoogleUser);
-  const isGoogleLogin = useSelector(isGoogleAuth);
-  const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+
+  const handleSignOut = async () => {
+    await dispatch(signOutUser());
+    navigate("/");
+  };
 
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language);
 
   useEffect(() => {
     localStorage.setItem(LANGUAGE_KEY, selectedLanguage);
   }, [selectedLanguage]);
-
-  const onLogout = () => {
-    if (isGoogleLogin) {
-      dispatch(googleLogout());
-    } else {
-      dispatch(logout());
-    }
-  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -62,13 +53,17 @@ const Logout = () => {
           style={{ opacity: selectedLanguage === "uk" ? 0.6 : 1 }}
         />
       </section>
-      <img src={icon} alt="Avatar" className={styles.logout__icon} />
-      <span className={styles.logout__name}>
-        {isGoogleLogin ? googleUser.name : user.name}
-      </span>
-      <button type="button" onClick={onLogout} className={styles.logout__btn}>
-        {t("Log out")}
-      </button>
+      {user && (
+        <>
+          <img src={icon} alt="Avatar" className={styles.logout__icon} />
+          <span className={styles.logout__name}>
+            {user.user_metadata?.full_name || user.email}
+          </span>
+          <button onClick={handleSignOut} className={styles.logout__btn}>
+            {t("Log out")}
+          </button>
+        </>
+      )}
     </section>
   );
 };
