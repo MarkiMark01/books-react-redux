@@ -82,3 +82,4 @@ test('handlePurchase adds book to cart and navigates to cart page', () => {
     expect(mockSetQuantity).toHaveBeenCalledWith(1);
     expect(mockNavigate).toHaveBeenCalledWith('/cart');
 });
+

@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import styles from "./stylesBookId.module.scss";
+import styles from "./styles.BookId.module.scss";
 
 const BooksIdComponents = ({
   uniqueBook,

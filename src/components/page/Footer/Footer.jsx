@@ -2,9 +2,10 @@ import styles from "./stylesFooter.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={styles.foot}>
+    <footer>
+      <section className={styles.foot}></section>
       <main className={styles.footer}>
-        <section>2024 &copy; Markiyan Marych</section>
+        <section>2024 &copy; by Markiyan Marych</section>
       </main>
     </footer>
   );

@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
-import { Loader } from "../shared/loader";
+import { Loader } from "../shared/Loader";
 
 const Books = lazy(() => import("./Books/Books"));
 const Login = lazy(() => import("./Login/Login"));
-const PrivateRoutes = lazy(() => import("../modules/PrivateRoute")); // Змінили імпорт тут
+const PublicRoute = lazy(() => import("../modules/PublicRoute"));
+const PrivateRoute = lazy(() => import("../modules/PrivateRoute"));
 const BooksId = lazy(() => import("../page/BooksId/BooksId"));
 const Description = lazy(() => import("../page/BooksId/Description"));
 const Cart = lazy(() => import("../page/Cart/Cart"));
@@ -15,21 +16,20 @@ const UserRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/login" element={<Login />} />
-        <Route element={<PrivateRoutes />}>
-          {" "}
-          {/* Тут також */}
-          <Route path="/books/:id" element={<BooksId />}>
-            <Route path="description" element={<Description />} />
-          </Route>
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/about" element={<About />} />
+        <Route path="/" element={<Books />}></Route>
+        <Route element={<PublicRoute />}>
+          <Route path="/login" element={<Login />} />
         </Route>
-        <Route path="*" element={<NotFoundPage />} />
+        <Route element={<PrivateRoute />}>
+          <Route path="/books/:id" element={<BooksId />}>
+            <Route path="description" element={<Description />}></Route>
+          </Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/about" element={<About />}></Route>
+        </Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </Suspense>
   );
 };
-
 export default UserRoutes;

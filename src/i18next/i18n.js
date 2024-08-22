@@ -10,15 +10,16 @@ const DEFAULT_LANGUAGE = 'en';
 const savedLanguage = localStorage.getItem(LANGUAGE_KEY) || DEFAULT_LANGUAGE;
 
 i18n.use(initReactI18next).init({
-    resources: {
-        ...eng,
-        ...ukr,
-    },
-    lng: savedLanguage,
-    fallbackLng: DEFAULT_LANGUAGE,
-    interpolation: {
-        escapeValue: false,
-    },
+  resources: {
+    ...eng,
+    ...ukr,
+  },
+  lng: savedLanguage,
+  fallbackLng: DEFAULT_LANGUAGE,
+  interpolation: {
+    escapeValue: false,
+  },
 });
 
 export default i18n;
+

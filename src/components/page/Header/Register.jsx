@@ -1,3 +1,31 @@
+// import { NavLink } from "react-router-dom";
+// import styles from "./stylesHeader.module.scss";
+
+// const Register = () => {
+//   return (
+//     <>
+//       <header className={styles.headerRegister}>
+//         <section className={styles.headerRegister2}>
+//           <NavLink to={"/"} className={styles.logo}>
+//             BookStore
+//           </NavLink>
+//           <nav className={styles.navRegister}>
+//             <section className={styles.navReg}>
+//               <NavLink to="/login">Log in </NavLink>
+//             </section>
+//             |
+//             <section className={styles.navReg}>
+//               <NavLink to="/register"> Sign up</NavLink>
+//             </section>
+//           </nav>
+//         </section>
+//       </header>
+//       <section className={styles.head}></section>
+//     </>
+//   );
+// };
+// export default Register;
+
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./stylesHeader.module.scss";
@@ -47,6 +75,10 @@ const Register = () => {
             <section className={styles.navReg}>
               <section style={{ marginRight: "5px" }}>
                 <NavLink to="/login">{t("Log in")}</NavLink>
+              </section>
+              |
+              <section style={{ marginLeft: "5px" }}>
+                <NavLink to="/register">{t("Sign up")}</NavLink>
               </section>
             </section>
           </nav>

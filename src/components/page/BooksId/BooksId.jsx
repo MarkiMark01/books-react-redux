@@ -43,18 +43,33 @@ const BooksId = () => {
   };
 
   const handlePurchase = () => {
-    dispatch(
-      addNewCart({
-        id: uniqueBook.id,
-        title: uniqueBook.title,
-        price: uniqueBook.price,
-        quantity: quantity,
-        totalPrice: totalPrice,
-      })
-    );
-    setQuantity(1);
-    navigate("/cart");
+    const isBookInCart = cart.some((item) => item.id === uniqueBook.id);
+    if (isBookInCart) {
+      // toggleModalOpen();
+    } else {
+      dispatch(
+        addNewCart({
+          id: uniqueBook.id,
+          title: uniqueBook.title,
+          price: uniqueBook.price,
+          quantity: quantity,
+          totalPrice: totalPrice,
+        })
+      );
+      setQuantity(1);
+      navigate("/cart");
+    }
   };
+
+  // if (!uniqueBook) {
+  //   return (
+  //     <section className={styles.bookId__emptyBlock}>
+  //       <p className={styles.bookId__empty}>
+  //         The book has not been selected yet...
+  //       </p>
+  //     </section>
+  //   );
+  // }
 
   return (
     <BooksIdComponents

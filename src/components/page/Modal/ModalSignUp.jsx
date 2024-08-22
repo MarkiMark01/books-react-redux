@@ -1,7 +1,6 @@
 import React from "react";
 import { createPortal } from "react-dom";
-import styles from "./stylesModalCart.module.scss";
-import gift from "../../../Assets/thanks.jpg";
+import styles from "./stylesModal.module.scss";
 import useModal from "../../shared/hooks/useModal";
 
 const modalRoot = document.querySelector("#modal-root");
@@ -17,13 +16,13 @@ export default function ModalWindow({ onClose }) {
 
   return createPortal(
     <div className={styles.modal__backdrop} onClick={handleBackdropClick}>
-      <div className={styles.modal__content}>
-        <div className={styles.modal__giftBox}>
-          <img src={gift} alt="Gift" className={styles.gift} />
+      <div className={styles.modal__content2}>
+        <section className={styles.modal__login}>
+          <article>Enter your email and password or log in, please :)</article>
           <button className={styles.modal__ok} onClick={handleBackdropClick}>
             Ok
           </button>
-        </div>
+        </section>
       </div>
     </div>,
     modalRoot

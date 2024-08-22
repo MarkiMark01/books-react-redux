@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import useAuth from "../../shared/hooks/useAuth";
 import useMenuItems from "../../shared/hooks/useMenuItems"; // Import the custom hook
 import Register from "./Register";
 import Logout from "./Logout";
@@ -13,7 +13,6 @@ const getClassName = ({ isActive }) => {
 };
 
 const Header = () => {
-  const user = useSelector((state) => state.auth.user);
   const [burgerActive, setBurgerActive] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const menuItems = useMenuItems();
@@ -44,9 +43,11 @@ const Header = () => {
     </li>
   ));
 
+  const isLogin = useAuth();
+
   return (
     <>
-      {user ? (
+      {isLogin ? (
         <header className={styles.header}>
           <section className={styles.header2}>
             <nav

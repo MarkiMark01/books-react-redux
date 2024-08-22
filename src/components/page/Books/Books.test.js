@@ -1,5 +1,3 @@
-
-
 const filteredBooks = (books, textFilter, priceFilter) => {
     return books.filter((book) => {
         const numericPrice = parseFloat(book.price);
@@ -47,7 +45,5 @@ describe('Filter function', () => {
         ]);
     });
 });
-
-
 
 
